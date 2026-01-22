@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_markups",
+  "info": {
+    "singularName": "category-markup",
+    "pluralName": "category-markups",
+    "displayName": "CategoryMarkup"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "vendor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vendor.vendor"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
+    },
+    "markupPercent": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendors",
+  "info": {
+    "singularName": "vendor",
+    "pluralName": "vendors",
+    "displayName": "Vendor"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "apiUrl": {
+      "type": "string"
+    },
+    "apiToken": {
+      "type": "string",
+      "private": true
+    },
+    "importFormat": {
+      "type": "enumeration",
+      "enum": ["api", "xml", "csv", "xlsx"],
+      "default": "api"
+    },
+    "markupPercent": {
+      "type": "decimal",
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "lastSync": {
+      "type": "datetime"
+    }
+  }
+}

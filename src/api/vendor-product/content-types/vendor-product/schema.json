@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vendor_products",
+  "info": {
+    "singularName": "vendor-product",
+    "pluralName": "vendor-products",
+    "displayName": "VendorProduct"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "vendor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vendor.vendor"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product"
+    },
+    "vendorProductId": {
+      "type": "string",
+      "required": true
+    },
+    "vendorSku": {
+      "type": "string"
+    },
+    "vendorPrice": {
+      "type": "decimal",
+      "required": true
+    },
+    "pricePartner": {
+      "type": "decimal"
+    },
+    "pricePromo": {
+      "type": "decimal"
+    },
+    "stockStatus": {
+      "type": "enumeration",
+      "enum": ["not_available", "available", "limited", "on_route", "on_demand"],
+      "default": "not_available"
+    },
+    "vendorCategory": {
+      "type": "string"
+    },
+    "vendorBrand": {
+      "type": "string"
+    },
+    "imageUrls": {
+      "type": "json"
+    },
+    "rawData": {
+      "type": "json"
+    },
+    "lastSynced": {
+      "type": "datetime"
+    }
+  }
+}
