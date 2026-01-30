@@ -1,0 +1,486 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_specifications",
+  "info": {
+    "singularName": "case-specification",
+    "pluralName": "case-specifications",
+    "displayName": "Case Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "case_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Lian_Li",
+        "NZXT",
+        "Corsair",
+        "Fractal_Design",
+        "Phanteks",
+        "be_quiet",
+        "Cooler_Master",
+        "Thermaltake",
+        "MSI",
+        "ASUS",
+        "Gigabyte",
+        "Silverstone",
+        "SSUPD",
+        "Meshify",
+        "DeepCool",
+        "Montech",
+        "InWin",
+        "Antec",
+        "BitFenix",
+        "Razer",
+        "HYTE",
+        "Jonsbo",
+        "SAMA",
+        "Cougar"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Full_Tower",
+        "Mid_Tower",
+        "Mini_Tower",
+        "SFF",
+        "HTPC",
+        "Open_Frame",
+        "Test_Bench"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Black",
+        "White",
+        "Gray",
+        "Silver",
+        "Red",
+        "Blue",
+        "Green",
+        "Pink",
+        "Orange",
+        "Purple",
+        "Black_White",
+        "Black_Red",
+        "Black_Blue",
+        "Black_Green",
+        "Gunmetal",
+        "Mesh_Black",
+        "Mesh_White"
+      ]
+    },
+    "motherboardSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Mini_ITX",
+        "Mini_ITX_Micro_ATX",
+        "Mini_ITX_Micro_ATX_ATX",
+        "Mini_ITX_Micro_ATX_ATX_E_ATX",
+        "Mini_DTX_Mini_ITX",
+        "All_Sizes"
+      ]
+    },
+    "maxGPULength": {
+      "type": "enumeration",
+      "enum": [
+        "Length_200mm",
+        "Length_250mm",
+        "Length_280mm",
+        "Length_300mm",
+        "Length_320mm",
+        "Length_330mm",
+        "Length_340mm",
+        "Length_350mm",
+        "Length_360mm",
+        "Length_370mm",
+        "Length_380mm",
+        "Length_400mm",
+        "Length_420mm",
+        "Length_450mm",
+        "Length_Over450mm"
+      ]
+    },
+    "maxCPUCoolerHeight": {
+      "type": "enumeration",
+      "enum": [
+        "Height_50mm",
+        "Height_55mm",
+        "Height_60mm",
+        "Height_65mm",
+        "Height_70mm",
+        "Height_75mm",
+        "Height_80mm",
+        "Height_100mm",
+        "Height_120mm",
+        "Height_140mm",
+        "Height_155mm",
+        "Height_160mm",
+        "Height_165mm",
+        "Height_170mm",
+        "Height_175mm",
+        "Height_180mm",
+        "Height_185mm",
+        "Height_190mm",
+        "Height_200mm"
+      ]
+    },
+    "maxPSULength": {
+      "type": "enumeration",
+      "enum": [
+        "Length_120mm",
+        "Length_140mm",
+        "Length_150mm",
+        "Length_160mm",
+        "Length_170mm",
+        "Length_180mm",
+        "Length_190mm",
+        "Length_200mm",
+        "Length_220mm",
+        "Length_250mm",
+        "Length_Unlimited"
+      ]
+    },
+    "psuPosition": {
+      "type": "enumeration",
+      "enum": [
+        "Bottom",
+        "Top",
+        "Rear",
+        "Chamber",
+        "Side"
+      ]
+    },
+    "PSUFormFactor": {
+      "type": "enumeration",
+      "enum": [
+        "ATX",
+        "SFX",
+        "SFX_L",
+        "ATX_SFX",
+        "TFX",
+        "Flex_ATX"
+      ]
+    },
+    "driveBays35": {
+      "type": "enumeration",
+      "enum": [
+        "Bays_0",
+        "Bays_1",
+        "Bays_2",
+        "Bays_3",
+        "Bays_4",
+        "Bays_5",
+        "Bays_6",
+        "Bays_8",
+        "Bays_10"
+      ]
+    },
+    "driveBays25": {
+      "type": "enumeration",
+      "enum": [
+        "Bays_0",
+        "Bays_1",
+        "Bays_2",
+        "Bays_3",
+        "Bays_4",
+        "Bays_5",
+        "Bays_6",
+        "Bays_8",
+        "Bays_10"
+      ]
+    },
+    "expansionSlots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_2",
+        "Slots_3",
+        "Slots_4",
+        "Slots_5",
+        "Slots_6",
+        "Slots_7",
+        "Slots_8",
+        "Slots_9",
+        "Slots_10"
+      ]
+    },
+    "verticalGPUSlots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "frontFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_1x120mm",
+        "Fan_2x120mm",
+        "Fan_3x120mm",
+        "Fan_4x120mm",
+        "Fan_1x140mm",
+        "Fan_2x140mm",
+        "Fan_3x140mm",
+        "Fan_1x200mm",
+        "Fan_2x200mm",
+        "Fan_Mixed",
+        "None"
+      ]
+    },
+    "topFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_1x120mm",
+        "Fan_2x120mm",
+        "Fan_3x120mm",
+        "Fan_1x140mm",
+        "Fan_2x140mm",
+        "Fan_3x140mm",
+        "Fan_1x200mm",
+        "Fan_Mixed",
+        "None"
+      ]
+    },
+    "rearFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_1x92mm",
+        "Fan_1x120mm",
+        "Fan_1x140mm",
+        "Fan_2x120mm",
+        "None"
+      ]
+    },
+    "bottomFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_1x120mm",
+        "Fan_2x120mm",
+        "Fan_3x120mm",
+        "Fan_1x140mm",
+        "Fan_2x140mm",
+        "None"
+      ]
+    },
+    "sideFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_1x120mm",
+        "Fan_2x120mm",
+        "Fan_3x120mm",
+        "Fan_1x140mm",
+        "Fan_2x140mm",
+        "None"
+      ]
+    },
+    "includedFans": {
+      "type": "enumeration",
+      "enum": [
+        "Fans_None",
+        "Fans_1x92mm",
+        "Fans_1x120mm",
+        "Fans_2x120mm",
+        "Fans_3x120mm",
+        "Fans_4x120mm",
+        "Fans_1x140mm",
+        "Fans_2x140mm",
+        "Fans_3x140mm",
+        "Fans_1x200mm",
+        "Fans_Mixed_2",
+        "Fans_Mixed_3",
+        "Fans_Mixed_4"
+      ]
+    },
+    "frontRadiatorSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Rad_None",
+        "Rad_120mm",
+        "Rad_140mm",
+        "Rad_240mm",
+        "Rad_280mm",
+        "Rad_360mm",
+        "Rad_420mm"
+      ]
+    },
+    "topRadiatorSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Rad_None",
+        "Rad_120mm",
+        "Rad_140mm",
+        "Rad_240mm",
+        "Rad_280mm",
+        "Rad_360mm",
+        "Rad_420mm"
+      ]
+    },
+    "rearRadiatorSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Rad_None",
+        "Rad_120mm",
+        "Rad_140mm"
+      ]
+    },
+    "bottomRadiatorSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Rad_None",
+        "Rad_120mm",
+        "Rad_240mm",
+        "Rad_280mm",
+        "Rad_360mm"
+      ]
+    },
+    "sideRadiatorSupport": {
+      "type": "enumeration",
+      "enum": [
+        "Rad_None",
+        "Rad_120mm",
+        "Rad_240mm",
+        "Rad_280mm",
+        "Rad_360mm"
+      ]
+    },
+    "frontIOUSB32Gen1": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "frontIOUSB32Gen2": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2"
+      ]
+    },
+    "frontIOUSBTypeC": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2"
+      ]
+    },
+    "frontIOAudio": {
+      "type": "boolean",
+      "default": true
+    },
+    "sidePanelMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Steel",
+        "Tempered_Glass",
+        "Acrylic",
+        "Mesh",
+        "Steel_Window",
+        "Tempered_Glass_Dual",
+        "Full_Mesh",
+        "Glass_Mesh_Combo"
+      ]
+    },
+    "frontPanelMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Steel",
+        "Mesh",
+        "Tempered_Glass",
+        "Acrylic",
+        "Plastic",
+        "Aluminum",
+        "Glass_Mesh_Combo"
+      ]
+    },
+    "caseLength": {
+      "type": "enumeration",
+      "enum": [
+        "Length_Under300mm",
+        "Length_300_350mm",
+        "Length_350_400mm",
+        "Length_400_450mm",
+        "Length_450_500mm",
+        "Length_500_550mm",
+        "Length_Over550mm"
+      ]
+    },
+    "caseWidth": {
+      "type": "enumeration",
+      "enum": [
+        "Width_Under150mm",
+        "Width_150_180mm",
+        "Width_180_210mm",
+        "Width_210_240mm",
+        "Width_240_270mm",
+        "Width_Over270mm"
+      ]
+    },
+    "caseHeight": {
+      "type": "enumeration",
+      "enum": [
+        "Height_Under300mm",
+        "Height_300_350mm",
+        "Height_350_400mm",
+        "Height_400_450mm",
+        "Height_450_500mm",
+        "Height_500_550mm",
+        "Height_Over550mm"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "Weight_Under3kg",
+        "Weight_3_5kg",
+        "Weight_5_7kg",
+        "Weight_7_9kg",
+        "Weight_9_11kg",
+        "Weight_11_13kg",
+        "Weight_13_15kg",
+        "Weight_Over15kg"
+      ]
+    },
+    "dustFilters": {
+      "type": "boolean",
+      "default": false
+    },
+    "cableManagement": {
+      "type": "boolean",
+      "default": true
+    },
+    "toolFree": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "argbController": {
+      "type": "boolean",
+      "default": false
+    },
+    "fanController": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

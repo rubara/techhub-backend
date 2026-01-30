@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "build_components",
+  "info": {
+    "singularName": "build-component",
+    "pluralName": "build-components",
+    "displayName": "build component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "nameBg": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "cpu",
+        "gpu",
+        "motherboard",
+        "ram",
+        "storage",
+        "psu",
+        "case",
+        "cooling",
+        "fans",
+        "os"
+      ]
+    },
+    "priceDifference": {
+      "type": "decimal",
+      "default": 0
+    },
+    "isDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "hasRgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "pc_build_templates": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pc-build-template.pc-build-template",
+      "mappedBy": "build_component"
+    }
+  }
+}

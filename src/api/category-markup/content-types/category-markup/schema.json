@@ -9,16 +9,12 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "vendor": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::vendor.vendor"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category"
     },
     "markupPercent": {
       "type": "decimal",

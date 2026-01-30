@@ -7,47 +7,66 @@
     "displayName": "Category"
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
-    "name_bg": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "name_en": {
-      "type": "string"
+    "nameBg": {
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "name_bg"
+      "targetField": "name",
+      "required": true
     },
-    "vendorCategoryId": {
-      "type": "string"
+    "description": {
+      "type": "text"
     },
-    "parent": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "children"
-    },
-    "children": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category",
-      "mappedBy": "parent"
+    "descriptionBg": {
+      "type": "text"
     },
     "image": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "sortOrder": {
+    "icon": {
+      "type": "string",
+      "default": "Emoji/icon"
+    },
+    "color": {
+      "type": "string",
+      "default": "#00B553"
+    },
+    "order": {
       "type": "integer",
       "default": 0
     },
-    "isVisible": {
+    "showInMenu": {
       "type": "boolean",
       "default": true
+    },
+    "showOnHomepage": {
+      "type": "boolean",
+      "default": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "category"
     }
   }
 }

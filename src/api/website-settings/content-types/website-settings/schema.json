@@ -1,0 +1,109 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "website-settings",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "default": "TechHub.bg"
+    },
+    "siteDescription": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "logoDark": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "primaryColor": {
+      "type": "string",
+      "default": "#00B553"
+    },
+    "secondaryColor": {
+      "type": "string",
+      "default": "#101720"
+    },
+    "defaultTheme": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light"
+      ]
+    },
+    "defaultLanguage": {
+      "type": "enumeration",
+      "enum": [
+        "bg",
+        "en"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "default": "Euro"
+    },
+    "currencySymbol": {
+      "type": "string",
+      "default": "€"
+    },
+    "showEuroPrices": {
+      "type": "boolean",
+      "default": true
+    },
+    "contactEmail": {
+      "type": "email"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "contactAddress": {
+      "type": "text"
+    },
+    "socialFacebook": {
+      "type": "string"
+    },
+    "socialInstagram": {
+      "type": "string"
+    },
+    "socialTikTok": {
+      "type": "string"
+    },
+    "socialTwitch": {
+      "type": "string"
+    },
+    "freeShippingThreshold": {
+      "type": "decimal",
+      "default": 150
+    },
+    "maintenanceMode": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

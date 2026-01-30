@@ -1,0 +1,467 @@
+{
+  "kind": "collectionType",
+  "collectionName": "microphone_specifications",
+  "info": {
+    "singularName": "microphone-specification",
+    "pluralName": "microphone-specifications",
+    "displayName": "Microphone Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "microphone_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Shure",
+        "Rode",
+        "Blue",
+        "Elgato",
+        "Audio_Technica",
+        "HyperX",
+        "Razer",
+        "Corsair",
+        "Logitech",
+        "SteelSeries",
+        "ASUS",
+        "Beyerdynamic",
+        "Sennheiser",
+        "EPOS",
+        "AKG",
+        "Samson",
+        "Fifine",
+        "Maono",
+        "NZXT",
+        "JBL",
+        "Creative",
+        "Neat",
+        "Presonus",
+        "Mackie",
+        "Focusrite",
+        "TC_Helicon"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "SM_Series",
+        "MV_Series",
+        "Motiv",
+        "NT_USB",
+        "NT_USB_Mini",
+        "PodMic",
+        "VideoMic",
+        "Yeti",
+        "Yeti_X",
+        "Yeti_Nano",
+        "Snowball",
+        "Snowball_Ice",
+        "Wave",
+        "Wave_DX",
+        "QuadCast",
+        "QuadCast_S",
+        "SoloCast",
+        "DuoCast",
+        "Seiren",
+        "Seiren_Mini",
+        "Seiren_V2",
+        "Seiren_Elite",
+        "Seiren_BT",
+        "Virtuoso",
+        "Blue_Voice",
+        "G_Series",
+        "Alias",
+        "ROG_Carnyx",
+        "ROG_Strix",
+        "TUF_Gaming",
+        "Fox",
+        "Capsule",
+        "AT2020",
+        "AT2035",
+        "AT2040",
+        "AT4040",
+        "Quantum_Stream",
+        "SL_Series",
+        "B_Series",
+        "Revelator",
+        "PD_Series",
+        "Scarlett",
+        "GoXLR"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "USB",
+        "XLR",
+        "USB_XLR",
+        "Wireless",
+        "USB_C",
+        "Lightning"
+      ]
+    },
+    "microphoneType": {
+      "type": "enumeration",
+      "enum": [
+        "Condenser",
+        "Dynamic",
+        "Ribbon",
+        "Electret",
+        "USB_Condenser",
+        "USB_Dynamic"
+      ]
+    },
+    "polarPattern": {
+      "type": "enumeration",
+      "enum": [
+        "Cardioid",
+        "Super_Cardioid",
+        "Hyper_Cardioid",
+        "Omnidirectional",
+        "Bidirectional",
+        "Multi_Pattern",
+        "Cardioid_Omnidirectional",
+        "Cardioid_Bidirectional",
+        "Cardioid_Omnidirectional_Bidirectional",
+        "Cardioid_Omnidirectional_Bidirectional_Stereo"
+      ]
+    },
+    "frequencyResponse": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_20_16000",
+        "Hz_20_18000",
+        "Hz_20_20000",
+        "Hz_30_18000",
+        "Hz_40_18000",
+        "Hz_50_16000",
+        "Hz_50_18000",
+        "Hz_50_20000",
+        "Hz_70_20000",
+        "Hz_100_10000",
+        "Hz_100_16000",
+        "Hz_100_18000"
+      ]
+    },
+    "sampleRate": {
+      "type": "enumeration",
+      "enum": [
+        "kHz_44_1",
+        "kHz_48",
+        "kHz_96",
+        "kHz_192",
+        "kHz_44_1_48",
+        "kHz_48_96",
+        "kHz_48_96_192"
+      ]
+    },
+    "bitDepth": {
+      "type": "enumeration",
+      "enum": [
+        "Bit_16",
+        "Bit_24",
+        "Bit_32",
+        "Bit_16_24",
+        "Bit_24_32"
+      ]
+    },
+    "sensitivity": {
+      "type": "enumeration",
+      "enum": [
+        "dBV_Minus_60",
+        "dBV_Minus_55",
+        "dBV_Minus_50",
+        "dBV_Minus_47",
+        "dBV_Minus_45",
+        "dBV_Minus_42",
+        "dBV_Minus_40",
+        "dBV_Minus_38",
+        "dBV_Minus_37",
+        "dBV_Minus_36",
+        "dBV_Minus_35",
+        "dBV_Minus_34",
+        "dBV_Minus_32"
+      ]
+    },
+    "maxSPL": {
+      "type": "enumeration",
+      "enum": [
+        "dB_110",
+        "dB_115",
+        "dB_120",
+        "dB_125",
+        "dB_130",
+        "dB_135",
+        "dB_140",
+        "dB_145",
+        "dB_150"
+      ]
+    },
+    "impedance": {
+      "type": "enumeration",
+      "enum": [
+        "Ohm_16",
+        "Ohm_32",
+        "Ohm_50",
+        "Ohm_75",
+        "Ohm_100",
+        "Ohm_150",
+        "Ohm_200",
+        "Ohm_250",
+        "Ohm_300"
+      ]
+    },
+    "diaphragmSize": {
+      "type": "enumeration",
+      "enum": [
+        "mm_10",
+        "mm_14",
+        "mm_16",
+        "mm_20",
+        "mm_22",
+        "mm_25",
+        "mm_34",
+        "Inch_1"
+      ]
+    },
+    "capsules": {
+      "type": "enumeration",
+      "enum": [
+        "Single",
+        "Dual",
+        "Triple",
+        "Quad"
+      ]
+    },
+    "gainControl": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Physical_Knob",
+        "Software_Only",
+        "Physical_And_Software",
+        "Touch_Control"
+      ]
+    },
+    "muteButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "muteIndicator": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "LED",
+        "RGB_LED",
+        "Tap_To_Mute_LED",
+        "Capacitive_Touch"
+      ]
+    },
+    "headphoneOutput": {
+      "type": "boolean",
+      "default": false
+    },
+    "headphoneJack": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "mm_3_5",
+        "mm_6_35",
+        "mm_3_5_And_6_35"
+      ]
+    },
+    "headphoneVolumeControl": {
+      "type": "boolean",
+      "default": false
+    },
+    "zeroLatencyMonitoring": {
+      "type": "boolean",
+      "default": false
+    },
+    "popFilter": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Built_In",
+        "Included_External",
+        "Sold_Separately"
+      ]
+    },
+    "shockMount": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Built_In",
+        "Included_External",
+        "Sold_Separately"
+      ]
+    },
+    "mountType": {
+      "type": "enumeration",
+      "enum": [
+        "Desktop_Stand",
+        "Desktop_Tripod",
+        "Boom_Arm_Compatible",
+        "Shock_Mount_Compatible",
+        "Thread_5_8",
+        "Thread_3_8",
+        "Thread_5_8_And_3_8",
+        "Magnetic_Desktop"
+      ]
+    },
+    "boomArmIncluded": {
+      "type": "boolean",
+      "default": false
+    },
+    "connectionInterface": {
+      "type": "enumeration",
+      "enum": [
+        "USB_A",
+        "USB_C",
+        "USB_A_To_USB_C",
+        "XLR_3_Pin",
+        "XLR_USB",
+        "Lightning",
+        "Wireless_USB_Dongle",
+        "Bluetooth"
+      ]
+    },
+    "cableLength": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "m_1_0",
+        "m_1_5",
+        "m_1_8",
+        "m_2_0",
+        "m_2_5",
+        "m_3_0"
+      ]
+    },
+    "cableDetachable": {
+      "type": "boolean",
+      "default": false
+    },
+    "dspEffects": {
+      "type": "boolean",
+      "default": false
+    },
+    "dspFeatures": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Noise_Reduction",
+        "Noise_Gate",
+        "Compressor",
+        "De_Esser",
+        "EQ",
+        "Limiter",
+        "Reverb",
+        "Voice_Effects",
+        "Full_Suite",
+        "AI_Noise_Removal"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Shure_Motiv",
+        "Shure_Plus_Motiv",
+        "Rode_Central",
+        "Rode_Connect",
+        "Blue_Voice",
+        "Elgato_Wave_Link",
+        "HyperX_NGENUITY",
+        "Razer_Synapse",
+        "Corsair_iCUE",
+        "Logitech_G_Hub",
+        "SteelSeries_GG",
+        "ASUS_Armoury_Crate",
+        "NZXT_CAM",
+        "JBL_QuantumENGINE"
+      ]
+    },
+    "plugAndPlay": {
+      "type": "boolean",
+      "default": true
+    },
+    "phantomPowerRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "phantomPowerVoltage": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "V_12",
+        "V_24",
+        "V_48",
+        "V_12_48"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgbZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Mic_Body",
+        "Mute_Button",
+        "Base",
+        "Full_Body",
+        "Customizable"
+      ]
+    },
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "Plastic",
+        "Metal",
+        "Aluminum",
+        "Steel",
+        "Zinc_Alloy",
+        "Die_Cast_Metal",
+        "Metal_Mesh"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "g_Under_200",
+        "g_200_300",
+        "g_300_400",
+        "g_400_500",
+        "g_500_600",
+        "g_600_800",
+        "g_Over_800"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Black",
+        "White",
+        "Silver",
+        "Gray",
+        "Red",
+        "Blue",
+        "Pink",
+        "Green",
+        "Gold",
+        "Rose_Gold",
+        "Matte_Black",
+        "Satin_Black"
+      ]
+    }
+  }
+}

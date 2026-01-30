@@ -9,16 +9,12 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "vendor": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::vendor.vendor"
-    },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product"
     },
     "vendorProductId": {
       "type": "string",
@@ -39,8 +35,14 @@
     },
     "stockStatus": {
       "type": "enumeration",
-      "enum": ["not_available", "available", "limited", "on_route", "on_demand"],
-      "default": "not_available"
+      "default": "not_available",
+      "enum": [
+        "not_available",
+        "available",
+        "limited",
+        "on_route",
+        "on_demand"
+      ]
     },
     "vendorCategory": {
       "type": "string"

@@ -9,76 +9,225 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
-    "name_bg": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "name_en": {
-      "type": "string"
+    "nameBg": {
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "name_bg"
+      "targetField": "name"
     },
-    "description_bg": {
-      "type": "richtext"
+    "sku": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
-    "description_en": {
-      "type": "richtext"
+    "description": {
+      "type": "blocks"
     },
-    "ean": {
+    "descriptionBg": {
+      "type": "blocks"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "shortDescriptionBg": {
       "type": "string"
     },
-    "model": {
-      "type": "string"
+    "price": {
+      "type": "decimal",
+      "required": true
     },
-    "warranty": {
-      "type": "integer",
-      "default": 24
-    },
-    "weight": {
+    "oldPrice": {
       "type": "decimal"
     },
-    "basePrice": {
-      "type": "decimal",
-      "required": true,
+    "costPrice": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer",
       "default": 0
     },
-    "salePrice": {
-      "type": "decimal"
+    "lowStockThreshold": {
+      "type": "integer",
+      "default": 5
     },
-    "images": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "gallery": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "documents": {
-      "type": "json"
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
     },
     "brand": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::brand.brand"
+      "target": "api::brand.brand",
+      "inversedBy": "Brand"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category"
+    "specifications": {
+      "type": "json"
     },
-    "isActive": {
-      "type": "boolean",
-      "default": true
-    },
-    "isFeatured": {
+    "featured": {
       "type": "boolean",
       "default": false
     },
+    "isNew": {
+      "type": "boolean",
+      "default": false
+    },
+    "onSale": {
+      "type": "boolean",
+      "default": false
+    },
+    "badge": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "new",
+        "hot",
+        "sale",
+        "limited"
+      ]
+    },
+    "rating": {
+      "type": "decimal",
+      "default": 0
+    },
+    "reviewCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "weight": {
+      "type": "decimal"
+    },
     "metaTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "seo"
     },
     "metaDescription": {
-      "type": "text"
+      "type": "text",
+      "default": "SEO"
+    },
+    "Product": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "gpuSpecification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::gpu-specification.gpu-specification",
+      "mappedBy": "product"
+    },
+    "cpu_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cpu-specification.cpu-specification",
+      "mappedBy": "product"
+    },
+    "motherboard_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::motherboard-specification.motherboard-specification",
+      "mappedBy": "product"
+    },
+    "ram_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ram-specification.ram-specification",
+      "mappedBy": "product"
+    },
+    "storage_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::storage-specification.storage-specification",
+      "mappedBy": "product"
+    },
+    "psu_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::psu-specification.psu-specification",
+      "mappedBy": "product"
+    },
+    "case_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::case-specification.case-specification",
+      "mappedBy": "product"
+    },
+    "laptop_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::laptop-specification.laptop-specification",
+      "mappedBy": "product"
+    },
+    "keyboard_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::keyboard-specification.keyboard-specification",
+      "mappedBy": "product"
+    },
+    "mouse_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mouse-specification.mouse-specification",
+      "mappedBy": "product"
+    },
+    "monitor_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::monitor-specification.monitor-specification",
+      "mappedBy": "product"
+    },
+    "headset_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::headset-specification.headset-specification",
+      "mappedBy": "product"
+    },
+    "mousepad_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mousepad-specification.mousepad-specification",
+      "mappedBy": "product"
+    },
+    "microphone_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::microphone-specification.microphone-specification",
+      "mappedBy": "product"
+    },
+    "webcam_specification": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::webcam-specification.webcam-specification",
+      "mappedBy": "product"
     }
   }
 }

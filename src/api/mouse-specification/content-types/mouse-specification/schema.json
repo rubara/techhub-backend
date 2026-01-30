@@ -1,0 +1,473 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mouse_specifications",
+  "info": {
+    "singularName": "mouse-specification",
+    "pluralName": "mouse-specifications",
+    "displayName": "Mouse Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "mouse_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Logitech",
+        "Razer",
+        "Corsair",
+        "SteelSeries",
+        "HyperX",
+        "ASUS_ROG",
+        "Zowie",
+        "Pulsar",
+        "Lamzu",
+        "Finalmouse",
+        "Glorious",
+        "Roccat",
+        "Cooler_Master",
+        "MSI",
+        "Gigabyte",
+        "Endgame_Gear",
+        "Vaxee",
+        "Ninjutso",
+        "Xtrfy",
+        "G_Wolves",
+        "Fantech",
+        "Bloody",
+        "VIPER",
+        "Lethal_Gaming_Gear",
+        "Deathadder",
+        "Mountain",
+        "Fnatic",
+        "Zaunkoenig",
+        "Rainy",
+        "WLMouse"
+      ]
+    },
+    "sensorType": {
+      "type": "enumeration",
+      "enum": [
+        "Optical",
+        "Laser",
+        "Hero_Optical",
+        "Focus_Pro",
+        "Razer_Focus_Pro",
+        "PixArt",
+        "Custom"
+      ]
+    },
+    "sensorModel": {
+      "type": "enumeration",
+      "enum": [
+        "PixArt_PAW3395",
+        "PixArt_PAW3399",
+        "PixArt_PAW3370",
+        "PixArt_PAW3359",
+        "PixArt_PAW3335",
+        "PixArt_PAW3327",
+        "PixArt_PAW3311",
+        "PixArt_PMW3360",
+        "PixArt_PMW3389",
+        "PixArt_PMW3366",
+        "Logitech_Hero_25K",
+        "Logitech_Hero_2",
+        "Razer_Focus_Pro_30K",
+        "Razer_Focus_Plus_26K",
+        "SteelSeries_TrueMove_Pro",
+        "SteelSeries_TrueMove_Air",
+        "Corsair_Marksman",
+        "ASUS_AimPoint_Pro",
+        "Finalmouse_Finalsensor",
+        "Custom_Sensor"
+      ]
+    },
+    "dpi": {
+      "type": "enumeration",
+      "enum": [
+        "DPI_8000",
+        "DPI_10000",
+        "DPI_12000",
+        "DPI_16000",
+        "DPI_18000",
+        "DPI_20000",
+        "DPI_25000",
+        "DPI_25600",
+        "DPI_26000",
+        "DPI_30000",
+        "DPI_32000",
+        "DPI_35000",
+        "DPI_42000"
+      ]
+    },
+    "maxAcceleration": {
+      "type": "enumeration",
+      "enum": [
+        "G_35",
+        "G_40",
+        "G_50",
+        "G_60",
+        "G_70",
+        "G_80",
+        "G_100"
+      ]
+    },
+    "maxSpeed": {
+      "type": "enumeration",
+      "enum": [
+        "IPS_300",
+        "IPS_400",
+        "IPS_450",
+        "IPS_500",
+        "IPS_550",
+        "IPS_650",
+        "IPS_750",
+        "IPS_850"
+      ]
+    },
+    "pollingRate": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_125",
+        "Hz_250",
+        "Hz_500",
+        "Hz_1000",
+        "Hz_2000",
+        "Hz_4000",
+        "Hz_8000"
+      ]
+    },
+    "buttons": {
+      "type": "enumeration",
+      "enum": [
+        "Buttons_4",
+        "Buttons_5",
+        "Buttons_6",
+        "Buttons_7",
+        "Buttons_8",
+        "Buttons_9",
+        "Buttons_10",
+        "Buttons_11",
+        "Buttons_12",
+        "Buttons_20"
+      ]
+    },
+    "sideButtons": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Buttons_1",
+        "Buttons_2",
+        "Buttons_3",
+        "Buttons_6",
+        "Buttons_12"
+      ]
+    },
+    "mainSwitches": {
+      "type": "enumeration",
+      "enum": [
+        "Omron_20M",
+        "Omron_50M",
+        "Omron_60M",
+        "Omron_70M",
+        "Kailh_GM_4_0",
+        "Kailh_GM_8_0",
+        "Razer_Optical_Gen_2",
+        "Razer_Optical_Gen_3",
+        "Huano_Blue_Shell",
+        "Huano_Pink_Dot",
+        "TTC_Gold",
+        "LK_Optical",
+        "Zippy_DF3_P1",
+        "Optical_Switches",
+        "Custom_Mechanical"
+      ]
+    },
+    "switchLifespan": {
+      "type": "enumeration",
+      "enum": [
+        "Clicks_20M",
+        "Clicks_50M",
+        "Clicks_60M",
+        "Clicks_70M",
+        "Clicks_80M",
+        "Clicks_90M",
+        "Clicks_100M"
+      ]
+    },
+    "scrollWheel": {
+      "type": "enumeration",
+      "enum": [
+        "Standard",
+        "Notched",
+        "Smooth",
+        "Tilt",
+        "Infinite_Scroll",
+        "MagSpeed",
+        "Dual_Mode"
+      ]
+    },
+    "connectivity": {
+      "type": "enumeration",
+      "enum": [
+        "Wired_USB",
+        "Wireless_2_4GHz",
+        "Bluetooth",
+        "Wired_Wireless_2_4GHz",
+        "Wired_Bluetooth",
+        "Wireless_2_4GHz_Bluetooth",
+        "Wired_Wireless_2_4GHz_Bluetooth"
+      ]
+    },
+    "cableType": {
+      "type": "enumeration",
+      "enum": [
+        "Fixed_Rubber",
+        "Fixed_Braided",
+        "Paracord",
+        "Detachable_Rubber",
+        "Detachable_Braided",
+        "Detachable_Paracord",
+        "Speedflex",
+        "Ultraweave"
+      ]
+    },
+    "cableLength": {
+      "type": "enumeration",
+      "enum": [
+        "m_1_5",
+        "m_1_8",
+        "m_2_0",
+        "m_2_1",
+        "m_2_5"
+      ]
+    },
+    "batteryType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Built_In_Rechargeable",
+        "AA_Battery",
+        "AAA_Battery"
+      ]
+    },
+    "batteryLife": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Hours_30",
+        "Hours_50",
+        "Hours_60",
+        "Hours_70",
+        "Hours_80",
+        "Hours_90",
+        "Hours_100",
+        "Hours_140",
+        "Hours_200",
+        "Hours_300",
+        "Hours_400",
+        "Hours_500"
+      ]
+    },
+    "chargingMethod": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "USB_C",
+        "Micro_USB",
+        "Wireless_Charging",
+        "Dock",
+        "USB_C_Wireless",
+        "USB_C_Dock"
+      ]
+    },
+    "gripStyle": {
+      "type": "enumeration",
+      "enum": [
+        "Palm",
+        "Claw",
+        "Fingertip",
+        "Palm_Claw",
+        "Claw_Fingertip",
+        "All_Grips"
+      ]
+    },
+    "handOrientation": {
+      "type": "enumeration",
+      "enum": [
+        "Right_Handed",
+        "Left_Handed",
+        "Ambidextrous"
+      ]
+    },
+    "shape": {
+      "type": "enumeration",
+      "enum": [
+        "Ergonomic",
+        "Symmetrical",
+        "Ergonomic_Large",
+        "Ergonomic_Medium",
+        "Ergonomic_Small",
+        "Symmetrical_Large",
+        "Symmetrical_Medium",
+        "Symmetrical_Small"
+      ]
+    },
+    "length": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_110",
+        "mm_110_115",
+        "mm_115_120",
+        "mm_120_125",
+        "mm_125_130",
+        "mm_Over_130"
+      ]
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_55",
+        "mm_55_60",
+        "mm_60_65",
+        "mm_65_70",
+        "mm_Over_70"
+      ]
+    },
+    "height": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_35",
+        "mm_35_38",
+        "mm_38_40",
+        "mm_40_42",
+        "mm_42_45",
+        "mm_Over_45"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "g_Under_50",
+        "g_50_55",
+        "g_55_60",
+        "g_60_65",
+        "g_65_70",
+        "g_70_75",
+        "g_75_80",
+        "g_80_85",
+        "g_85_90",
+        "g_90_100",
+        "g_100_110",
+        "g_Over_110"
+      ]
+    },
+    "shellMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Plastic_ABS",
+        "Plastic_PBT",
+        "Magnesium_Alloy",
+        "Carbon_Fiber",
+        "Honeycomb_Plastic",
+        "Recycled_Plastic"
+      ]
+    },
+    "coating": {
+      "type": "enumeration",
+      "enum": [
+        "Matte",
+        "Glossy",
+        "Rubberized",
+        "Textured",
+        "Grip_Tape",
+        "UV_Coating"
+      ]
+    },
+    "feetMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "PTFE",
+        "Virgin_PTFE",
+        "Glass",
+        "Ceramic",
+        "Sapphire",
+        "Tiger_ICE",
+        "Corepadz",
+        "Superglides"
+      ]
+    },
+    "onboardMemory": {
+      "type": "boolean",
+      "default": false
+    },
+    "onboardProfiles": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Profiles_1",
+        "Profiles_3",
+        "Profiles_5",
+        "Profiles_Unlimited"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logitech_G_Hub",
+        "Razer_Synapse",
+        "Corsair_iCUE",
+        "SteelSeries_GG",
+        "HyperX_NGENUITY",
+        "ASUS_Armoury_Crate",
+        "Glorious_Core",
+        "Roccat_Swarm",
+        "Cooler_Master_Portal",
+        "Pulsar_Fusion",
+        "Lamzu_Atlantis",
+        "Endgame_Gear_Config"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgbZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logo",
+        "Scroll_Wheel",
+        "Logo_Scroll",
+        "Underglow",
+        "Full_Body"
+      ]
+    },
+    "weightTuning": {
+      "type": "boolean",
+      "default": false
+    },
+    "dpiButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "liftOffDistance": {
+      "type": "enumeration",
+      "enum": [
+        "mm_1_0",
+        "mm_1_5",
+        "mm_2_0",
+        "mm_3_0",
+        "Adjustable"
+      ]
+    }
+  }
+}

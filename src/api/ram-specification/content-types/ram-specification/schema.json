@@ -1,0 +1,260 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ram_specifications",
+  "info": {
+    "singularName": "ram-specification",
+    "pluralName": "ram-specifications",
+    "displayName": "RAM Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "ram_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Corsair",
+        "G_Skill",
+        "Kingston",
+        "Crucial",
+        "TeamGroup",
+        "ADATA",
+        "Patriot",
+        "PNY",
+        "Samsung",
+        "SK_Hynix",
+        "Micron",
+        "Lexar",
+        "Silicon_Power"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR5"
+      ]
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "DIMM",
+        "SO_DIMM"
+      ]
+    },
+    "capacity": {
+      "type": "enumeration",
+      "enum": [
+        "GB_4",
+        "GB_8",
+        "GB_16",
+        "GB_24",
+        "GB_32",
+        "GB_48",
+        "GB_64",
+        "GB_96",
+        "GB_128",
+        "GB_192",
+        "GB_256"
+      ]
+    },
+    "modules": {
+      "type": "enumeration",
+      "enum": [
+        "Kit_1x4GB",
+        "Kit_1x8GB",
+        "Kit_1x16GB",
+        "Kit_1x24GB",
+        "Kit_1x32GB",
+        "Kit_1x48GB",
+        "Kit_2x4GB",
+        "Kit_2x8GB",
+        "Kit_2x16GB",
+        "Kit_2x24GB",
+        "Kit_2x32GB",
+        "Kit_2x48GB",
+        "Kit_4x8GB",
+        "Kit_4x16GB",
+        "Kit_4x32GB",
+        "Kit_4x48GB",
+        "Kit_8x16GB",
+        "Kit_8x32GB"
+      ]
+    },
+    "speed": {
+      "type": "enumeration",
+      "enum": [
+        "MTs_2133",
+        "MTs_2400",
+        "MTs_2666",
+        "MTs_2933",
+        "MTs_3000",
+        "MTs_3200",
+        "MTs_3600",
+        "MTs_4000",
+        "MTs_4400",
+        "MTs_4800",
+        "MTs_5200",
+        "MTs_5600",
+        "MTs_6000",
+        "MTs_6200",
+        "MTs_6400",
+        "MTs_6600",
+        "MTs_6800",
+        "MTs_7000",
+        "MTs_7200",
+        "MTs_7400",
+        "MTs_7600",
+        "MTs_7800",
+        "MTs_8000",
+        "MTs_8200",
+        "MTs_8400",
+        "MTs_8600"
+      ]
+    },
+    "latency": {
+      "type": "enumeration",
+      "enum": [
+        "CL14",
+        "CL15",
+        "CL16",
+        "CL17",
+        "CL18",
+        "CL19",
+        "CL20",
+        "CL22",
+        "CL24",
+        "CL26",
+        "CL28",
+        "CL30",
+        "CL32",
+        "CL34",
+        "CL36",
+        "CL38",
+        "CL40",
+        "CL42",
+        "CL44",
+        "CL46",
+        "CL48"
+      ]
+    },
+    "voltage": {
+      "type": "enumeration",
+      "enum": [
+        "V_1_10",
+        "V_1_15",
+        "V_1_20",
+        "V_1_25",
+        "V_1_30",
+        "V_1_35",
+        "V_1_40",
+        "V_1_45",
+        "V_1_50",
+        "V_1_55",
+        "V_1_60"
+      ]
+    },
+    "timings": {
+      "type": "enumeration",
+      "enum": [
+        "T_14_14_14_34",
+        "T_15_15_15_35",
+        "T_16_16_16_36",
+        "T_16_18_18_36",
+        "T_16_18_18_38",
+        "T_16_20_20_38",
+        "T_18_18_18_38",
+        "T_18_22_22_42",
+        "T_19_19_19_39",
+        "T_20_20_20_40",
+        "T_22_22_22_52",
+        "T_28_34_34_89",
+        "T_30_36_36_76",
+        "T_30_38_38_96",
+        "T_32_38_38_96",
+        "T_32_39_39_102",
+        "T_34_42_42_108",
+        "T_36_44_44_96",
+        "T_36_48_48_96",
+        "T_38_38_38_96",
+        "T_40_40_40_76",
+        "T_40_48_48_96",
+        "T_42_42_42_84",
+        "T_46_46_46_96",
+        "T_48_48_48_96"
+      ]
+    },
+    "profile": {
+      "type": "enumeration",
+      "enum": [
+        "JEDEC",
+        "XMP_2_0",
+        "XMP_3_0",
+        "EXPO",
+        "XMP_EXPO",
+        "Intel_XMP_AMD_EXPO"
+      ]
+    },
+    "heatspreader": {
+      "type": "boolean",
+      "default": true
+    },
+    "height": {
+      "type": "enumeration",
+      "enum": [
+        "Height_Under30mm",
+        "Height_30_35mm",
+        "Height_35_40mm",
+        "Height_40_45mm",
+        "Height_45_50mm",
+        "Height_50_55mm",
+        "Height_Over55mm"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgbType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Static",
+        "Addressable",
+        "Sync_Aura",
+        "Sync_Mystic",
+        "Sync_Fusion",
+        "Sync_Polychrome",
+        "Sync_iCUE",
+        "Sync_Universal"
+      ]
+    },
+    "eccSupport": {
+      "type": "boolean",
+      "default": false
+    },
+    "registeredBuffered": {
+      "type": "boolean",
+      "default": false
+    },
+    "onDieECC": {
+      "type": "boolean",
+      "default": false
+    },
+    "intelXmpCertified": {
+      "type": "boolean",
+      "default": false
+    },
+    "amdExpoCertified": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

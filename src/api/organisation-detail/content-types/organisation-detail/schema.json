@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "organisation_details",
+  "info": {
+    "singularName": "organisation-detail",
+    "pluralName": "organisation-details",
+    "displayName": "Organisation Details"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "eik": {
+      "type": "string"
+    },
+    "vatNumber": {
+      "type": "string"
+    },
+    "mol": {
+      "type": "string"
+    },
+    "addres": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "iban": {
+      "type": "string"
+    },
+    "bic": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

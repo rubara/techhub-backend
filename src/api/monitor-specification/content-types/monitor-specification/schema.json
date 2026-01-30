@@ -1,0 +1,601 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monitor_specifications",
+  "info": {
+    "singularName": "monitor-specification",
+    "pluralName": "monitor-specifications",
+    "displayName": "Monitor Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "monitor_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "ASUS",
+        "MSI",
+        "Acer",
+        "LG",
+        "Samsung",
+        "Dell",
+        "BenQ",
+        "ViewSonic",
+        "AOC",
+        "Gigabyte",
+        "Philips",
+        "HP",
+        "Corsair",
+        "Razer",
+        "Lenovo",
+        "NZXT",
+        "Cooler_Master",
+        "Eve",
+        "Nixeus",
+        "Xiaomi",
+        "Huawei",
+        "Innocn",
+        "KTC",
+        "KOORUI",
+        "Titan_Army"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "ROG_Swift",
+        "ROG_Strix",
+        "TUF_Gaming",
+        "ProArt",
+        "ZenScreen",
+        "MAG",
+        "MPG",
+        "MEG",
+        "Optix",
+        "Predator",
+        "Nitro",
+        "VG_Series",
+        "UltraGear",
+        "Odyssey",
+        "ViewFinity",
+        "Alienware",
+        "UltraSharp",
+        "Dell_S_Series",
+        "Dell_G_Series",
+        "Zowie",
+        "Mobiuz",
+        "EX_Series",
+        "EW_Series",
+        "XG_Series",
+        "VX_Series",
+        "Elite",
+        "VP_Series",
+        "AORUS",
+        "M_Series",
+        "Gaming_Series",
+        "Evnia",
+        "Momentum",
+        "Omen",
+        "Xeneon",
+        "Raptor",
+        "ThinkVision",
+        "Legion",
+        "Canvas"
+      ]
+    },
+    "screenSize": {
+      "type": "enumeration",
+      "enum": [
+        "Inch_21_5",
+        "Inch_23_8",
+        "Inch_24",
+        "Inch_24_5",
+        "Inch_25",
+        "Inch_27",
+        "Inch_28",
+        "Inch_31_5",
+        "Inch_32",
+        "Inch_34",
+        "Inch_37_5",
+        "Inch_38",
+        "Inch_42",
+        "Inch_43",
+        "Inch_45",
+        "Inch_48",
+        "Inch_49",
+        "Inch_55",
+        "Inch_57"
+      ]
+    },
+    "aspectRatio": {
+      "type": "enumeration",
+      "enum": [
+        "Ratio_16_9",
+        "Ratio_16_10",
+        "Ratio_21_9",
+        "Ratio_32_9",
+        "Ratio_32_10",
+        "Ratio_4_3"
+      ]
+    },
+    "resolution": {
+      "type": "enumeration",
+      "enum": [
+        "FHD_1920x1080",
+        "FHD_Plus_1920x1200",
+        "WFHD_2560x1080",
+        "QHD_2560x1440",
+        "QHD_Plus_2560x1600",
+        "WQHD_3440x1440",
+        "WQHD_Plus_3840x1600",
+        "UHD_4K_3840x2160",
+        "UHD_4K_Plus_3840x2400",
+        "DQHD_5120x1440",
+        "UHD_5K_5120x2160",
+        "UHD_5K_5120x2880",
+        "UHD_8K_7680x4320"
+      ]
+    },
+    "panelType": {
+      "type": "enumeration",
+      "enum": [
+        "IPS",
+        "VA",
+        "TN",
+        "OLED",
+        "QD_OLED",
+        "Mini_LED",
+        "Nano_IPS",
+        "Fast_IPS",
+        "Rapid_IPS",
+        "IPS_Black",
+        "AHVA"
+      ]
+    },
+    "refreshRate": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_60",
+        "Hz_75",
+        "Hz_100",
+        "Hz_120",
+        "Hz_144",
+        "Hz_165",
+        "Hz_170",
+        "Hz_175",
+        "Hz_180",
+        "Hz_200",
+        "Hz_240",
+        "Hz_280",
+        "Hz_300",
+        "Hz_360",
+        "Hz_390",
+        "Hz_480",
+        "Hz_500",
+        "Hz_540",
+        "Hz_600"
+      ]
+    },
+    "responseTime": {
+      "type": "enumeration",
+      "enum": [
+        "ms_0_03",
+        "ms_0_1",
+        "ms_0_2",
+        "ms_0_3",
+        "ms_0_5",
+        "ms_1",
+        "ms_2",
+        "ms_3",
+        "ms_4",
+        "ms_5",
+        "ms_8"
+      ]
+    },
+    "brightness": {
+      "type": "enumeration",
+      "enum": [
+        "Nits_250",
+        "Nits_300",
+        "Nits_350",
+        "Nits_400",
+        "Nits_450",
+        "Nits_500",
+        "Nits_600",
+        "Nits_800",
+        "Nits_1000",
+        "Nits_1300",
+        "Nits_1400",
+        "Nits_1600"
+      ]
+    },
+    "contrast": {
+      "type": "enumeration",
+      "enum": [
+        "Contrast_1000_1",
+        "Contrast_1500_1",
+        "Contrast_2500_1",
+        "Contrast_3000_1",
+        "Contrast_4000_1",
+        "Contrast_5000_1",
+        "Contrast_1000000_1",
+        "Contrast_Infinite"
+      ]
+    },
+    "hdrSupport": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "HDR10",
+        "HDR10_Plus",
+        "HDR400",
+        "HDR600",
+        "HDR1000",
+        "HDR1400",
+        "Dolby_Vision",
+        "DisplayHDR_True_Black_400",
+        "DisplayHDR_True_Black_500"
+      ]
+    },
+    "colorGamut": {
+      "type": "enumeration",
+      "enum": [
+        "sRGB_95",
+        "sRGB_99",
+        "sRGB_100",
+        "sRGB_125",
+        "sRGB_150",
+        "DCI_P3_90",
+        "DCI_P3_95",
+        "DCI_P3_98",
+        "DCI_P3_99",
+        "DCI_P3_100",
+        "Adobe_RGB_95",
+        "Adobe_RGB_99",
+        "Adobe_RGB_100"
+      ]
+    },
+    "colorDepth": {
+      "type": "enumeration",
+      "enum": [
+        "Bit_6",
+        "Bit_8",
+        "Bit_8_Plus_FRC",
+        "Bit_10",
+        "Bit_10_Plus_FRC",
+        "Bit_12"
+      ]
+    },
+    "deltaE": {
+      "type": "enumeration",
+      "enum": [
+        "Delta_E_Under_1",
+        "Delta_E_Under_2",
+        "Delta_E_Under_3",
+        "Delta_E_3_5",
+        "Delta_E_Over_5",
+        "Factory_Calibrated"
+      ]
+    },
+    "adaptiveSync": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "AMD_FreeSync",
+        "AMD_FreeSync_Premium",
+        "AMD_FreeSync_Premium_Pro",
+        "NVIDIA_G_Sync_Compatible",
+        "NVIDIA_G_Sync",
+        "NVIDIA_G_Sync_Ultimate",
+        "Adaptive_Sync",
+        "VRR"
+      ]
+    },
+    "curvature": {
+      "type": "enumeration",
+      "enum": [
+        "Flat",
+        "Curved_1000R",
+        "Curved_1200R",
+        "Curved_1500R",
+        "Curved_1800R",
+        "Curved_2300R",
+        "Curved_3000R",
+        "Curved_4000R"
+      ]
+    },
+    "coating": {
+      "type": "enumeration",
+      "enum": [
+        "Matte",
+        "Glossy",
+        "Semi_Glossy",
+        "Anti_Glare",
+        "Nano_Texture"
+      ]
+    },
+    "backlightType": {
+      "type": "enumeration",
+      "enum": [
+        "LED",
+        "WLED",
+        "Mini_LED",
+        "QD_LED",
+        "OLED",
+        "Dual_Layer_LED"
+      ]
+    },
+    "localDimmingZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Zones_16",
+        "Zones_32",
+        "Zones_64",
+        "Zones_128",
+        "Zones_256",
+        "Zones_512",
+        "Zones_576",
+        "Zones_1024",
+        "Zones_1152",
+        "Zones_2048",
+        "Zones_2304",
+        "Per_Pixel"
+      ]
+    },
+    "displayPortVersion": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "DP_1_2",
+        "DP_1_4",
+        "DP_2_0",
+        "DP_2_1"
+      ]
+    },
+    "displayPortCount": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3"
+      ]
+    },
+    "hdmiVersion": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "HDMI_1_4",
+        "HDMI_2_0",
+        "HDMI_2_1"
+      ]
+    },
+    "hdmiCount": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "usbCDisplayPort": {
+      "type": "boolean",
+      "default": false
+    },
+    "usbCPowerDelivery": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "W_15",
+        "W_45",
+        "W_65",
+        "W_90",
+        "W_96",
+        "W_100",
+        "W_140"
+      ]
+    },
+    "usbHub": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "USB_2_0_x2",
+        "USB_2_0_x4",
+        "USB_3_0_x2",
+        "USB_3_0_x4",
+        "USB_3_2_x2",
+        "USB_3_2_x4"
+      ]
+    },
+    "audioOutput": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Headphone_Jack",
+        "Line_Out",
+        "Headphone_Line_Out"
+      ]
+    },
+    "builtInSpeakers": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "W_2x1",
+        "W_2x2",
+        "W_2x3",
+        "W_2x5",
+        "W_2x7",
+        "W_2x10",
+        "Soundbar"
+      ]
+    },
+    "kvm": {
+      "type": "boolean",
+      "default": false
+    },
+    "pip": {
+      "type": "boolean",
+      "default": false
+    },
+    "pbp": {
+      "type": "boolean",
+      "default": false
+    },
+    "vesaMount": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "VESA_75x75",
+        "VESA_100x100",
+        "VESA_200x200",
+        "VESA_300x300"
+      ]
+    },
+    "standAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "Tilt_Only",
+        "Tilt_Height",
+        "Tilt_Swivel",
+        "Tilt_Swivel_Height",
+        "Tilt_Swivel_Pivot_Height",
+        "No_Stand"
+      ]
+    },
+    "heightAdjustment": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "mm_100",
+        "mm_120",
+        "mm_130",
+        "mm_150",
+        "mm_180"
+      ]
+    },
+    "swivel": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Deg_15",
+        "Deg_20",
+        "Deg_30",
+        "Deg_45",
+        "Deg_60",
+        "Deg_90"
+      ]
+    },
+    "tilt": {
+      "type": "enumeration",
+      "enum": [
+        "Deg_5_15",
+        "Deg_5_20",
+        "Deg_5_23",
+        "Deg_5_25",
+        "Deg_5_35"
+      ]
+    },
+    "pivot": {
+      "type": "boolean",
+      "default": false
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "ASUS_DisplayWidget",
+        "MSI_Gaming_OSD",
+        "LG_OnScreen_Control",
+        "Samsung_Easy_Setting_Box",
+        "Dell_Display_Manager",
+        "BenQ_Display_Pilot",
+        "Acer_Display_Widget",
+        "Gigabyte_OSD_Sidekick",
+        "AOC_G_Menu"
+      ]
+    },
+    "osd": {
+      "type": "enumeration",
+      "enum": [
+        "Physical_Buttons",
+        "Joystick",
+        "Touch_Sensitive",
+        "Remote"
+      ]
+    },
+    "bluelightFilter": {
+      "type": "boolean",
+      "default": true
+    },
+    "flickerFree": {
+      "type": "boolean",
+      "default": true
+    },
+    "crosshairOverlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "fpsCounter": {
+      "type": "boolean",
+      "default": false
+    },
+    "blackEquializer": {
+      "type": "boolean",
+      "default": false
+    },
+    "motionBlurReduction": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "ELMB",
+        "ELMB_Sync",
+        "DyAc",
+        "DyAc_Plus",
+        "ULMB",
+        "ULMB_2",
+        "Blur_Busters_Approved",
+        "MBR"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "energyRating": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ]
+    },
+    "powerConsumption": {
+      "type": "enumeration",
+      "enum": [
+        "W_Under_20",
+        "W_20_30",
+        "W_30_40",
+        "W_40_50",
+        "W_50_75",
+        "W_75_100",
+        "W_100_150",
+        "W_150_200",
+        "W_Over_200"
+      ]
+    }
+  }
+}

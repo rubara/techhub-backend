@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoice_clients",
+  "info": {
+    "singularName": "invoice-client",
+    "pluralName": "invoice-clients",
+    "displayName": "Invoice client"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoiceNumber": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "issuedDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "buyerName": {
+      "type": "string",
+      "required": true
+    },
+    "buyerEik": {
+      "type": "string"
+    },
+    "buyerVatNumber": {
+      "type": "string"
+    },
+    "buyerAddress": {
+      "type": "string",
+      "required": true
+    },
+    "buyerCity": {
+      "type": "string"
+    },
+    "buyerMol": {
+      "type": "string"
+    },
+    "items": {
+      "type": "json"
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "vatAmount": {
+      "type": "decimal"
+    },
+    "totalAmount": {
+      "type": "decimal"
+    },
+    "invoiceStatus": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "issued",
+        "paid",
+        "cancelled"
+      ]
+    },
+    "pdfFile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "notes": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "invoice_clients"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    }
+  }
+}

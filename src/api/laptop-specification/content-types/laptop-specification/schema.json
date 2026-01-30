@@ -1,0 +1,748 @@
+{
+  "kind": "collectionType",
+  "collectionName": "laptop_specifications",
+  "info": {
+    "singularName": "laptop-specification",
+    "pluralName": "laptop-specifications",
+    "displayName": "Laptop Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "laptop_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "ASUS",
+        "MSI",
+        "Lenovo",
+        "Acer",
+        "HP",
+        "Dell",
+        "Razer",
+        "Gigabyte",
+        "Alienware",
+        "Apple",
+        "Samsung",
+        "Huawei",
+        "Xiaomi",
+        "LG",
+        "Microsoft",
+        "Framework"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "ROG_Zephyrus",
+        "ROG_Strix",
+        "ROG_Flow",
+        "TUF_Gaming",
+        "Vivobook",
+        "Zenbook",
+        "ProArt",
+        "Legion_Pro",
+        "Legion_Slim",
+        "Legion_Go",
+        "IdeaPad_Gaming",
+        "ThinkPad",
+        "ThinkBook",
+        "Predator_Helios",
+        "Predator_Triton",
+        "Nitro_5",
+        "Nitro_7",
+        "Nitro_V",
+        "Swift",
+        "Aspire",
+        "Omen",
+        "Victus",
+        "Pavilion_Gaming",
+        "Envy",
+        "Spectre",
+        "G_Series",
+        "XPS",
+        "Inspiron",
+        "Latitude",
+        "Precision",
+        "Alienware_M",
+        "Alienware_X",
+        "Razer_Blade",
+        "Razer_Book",
+        "AORUS",
+        "AERO",
+        "G5",
+        "Stealth",
+        "Raider",
+        "Titan",
+        "Crosshair",
+        "Vector",
+        "Katana",
+        "Cyborg",
+        "Pulse",
+        "Thin",
+        "Sword",
+        "Creator",
+        "Prestige",
+        "Modern",
+        "MacBook_Air",
+        "MacBook_Pro",
+        "Galaxy_Book",
+        "MateBook",
+        "RedmiBook",
+        "Gram",
+        "Surface_Laptop",
+        "Surface_Pro",
+        "Framework_Laptop"
+      ]
+    },
+    "screenSize": {
+      "type": "enumeration",
+      "enum": [
+        "Inch_13_3",
+        "Inch_14",
+        "Inch_14_5",
+        "Inch_15_6",
+        "Inch_16",
+        "Inch_16_1",
+        "Inch_17",
+        "Inch_17_3",
+        "Inch_18"
+      ]
+    },
+    "screenResolution": {
+      "type": "enumeration",
+      "enum": [
+        "HD_1366x768",
+        "FHD_1920x1080",
+        "FHD_Plus_1920x1200",
+        "QHD_2560x1440",
+        "QHD_Plus_2560x1600",
+        "UHD_3840x2160",
+        "OLED_2880x1800",
+        "Mini_LED_2560x1600",
+        "Retina_2560x1664",
+        "Retina_3024x1964",
+        "Retina_3456x2234"
+      ]
+    },
+    "screenRefreshRate": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_60",
+        "Hz_90",
+        "Hz_120",
+        "Hz_144",
+        "Hz_165",
+        "Hz_180",
+        "Hz_240",
+        "Hz_300",
+        "Hz_360",
+        "Hz_500"
+      ]
+    },
+    "panelType": {
+      "type": "enumeration",
+      "enum": [
+        "IPS",
+        "IPS_Level",
+        "VA",
+        "TN",
+        "OLED",
+        "Mini_LED",
+        "Nebula_Display",
+        "Nebula_HDR",
+        "ROG_Nebula",
+        "Liquid_Retina",
+        "Liquid_Retina_XDR"
+      ]
+    },
+    "screenBrightness": {
+      "type": "enumeration",
+      "enum": [
+        "Nits_250",
+        "Nits_300",
+        "Nits_350",
+        "Nits_400",
+        "Nits_500",
+        "Nits_600",
+        "Nits_800",
+        "Nits_1000",
+        "Nits_1100",
+        "Nits_1600"
+      ]
+    },
+    "screenResponseTime": {
+      "type": "enumeration",
+      "enum": [
+        "Ms_1",
+        "Ms_2",
+        "Ms_3",
+        "Ms_4",
+        "Ms_5",
+        "Ms_7",
+        "Ms_8"
+      ]
+    },
+    "cpuManufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Intel",
+        "AMD",
+        "Apple",
+        "Qualcomm"
+      ]
+    },
+    "cpuSeries": {
+      "type": "enumeration",
+      "enum": [
+        "Core_i9_14th_Gen",
+        "Core_i9_13th_Gen",
+        "Core_i7_14th_Gen",
+        "Core_i7_13th_Gen",
+        "Core_i5_14th_Gen",
+        "Core_i5_13th_Gen",
+        "Core_i3_14th_Gen",
+        "Core_i3_13th_Gen",
+        "Core_Ultra_9",
+        "Core_Ultra_7",
+        "Core_Ultra_5",
+        "Ryzen_9_8000",
+        "Ryzen_9_7000",
+        "Ryzen_7_8000",
+        "Ryzen_7_7000",
+        "Ryzen_5_8000",
+        "Ryzen_5_7000",
+        "Apple_M3",
+        "Apple_M3_Pro",
+        "Apple_M3_Max",
+        "Apple_M4",
+        "Apple_M4_Pro",
+        "Apple_M4_Max",
+        "Snapdragon_X_Elite",
+        "Snapdragon_X_Plus"
+      ]
+    },
+    "cpuModel": {
+      "type": "enumeration",
+      "enum": [
+        "i9_14900HX",
+        "i9_14900H",
+        "i9_13980HX",
+        "i9_13900HX",
+        "i9_13900H",
+        "i7_14700HX",
+        "i7_14650HX",
+        "i7_13850HX",
+        "i7_13800H",
+        "i7_13700H",
+        "i5_14500HX",
+        "i5_14450HX",
+        "i5_13600H",
+        "i5_13500H",
+        "i5_13420H",
+        "Ultra_9_185H",
+        "Ultra_7_165H",
+        "Ultra_7_155H",
+        "Ultra_5_125H",
+        "R9_8945HX",
+        "R9_8945HS",
+        "R9_7945HX",
+        "R9_7945HX3D",
+        "R9_7940HX",
+        "R9_7940HS",
+        "R7_8845HS",
+        "R7_8840HS",
+        "R7_7840HS",
+        "R7_7840U",
+        "R7_7735HS",
+        "R5_8645HS",
+        "R5_8640HS",
+        "R5_7640HS",
+        "R5_7640U",
+        "R5_7535HS",
+        "M3",
+        "M3_Pro_11_Core",
+        "M3_Pro_12_Core",
+        "M3_Max_14_Core",
+        "M3_Max_16_Core",
+        "M4",
+        "M4_Pro_12_Core",
+        "M4_Pro_14_Core",
+        "M4_Max"
+      ]
+    },
+    "gpuManufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "NVIDIA",
+        "AMD",
+        "Intel",
+        "Apple",
+        "Integrated"
+      ]
+    },
+    "gpuModel": {
+      "type": "enumeration",
+      "enum": [
+        "RTX_4090_Laptop",
+        "RTX_4080_Laptop",
+        "RTX_4070_Laptop",
+        "RTX_4060_Laptop",
+        "RTX_4050_Laptop",
+        "RTX_3080_Ti_Laptop",
+        "RTX_3080_Laptop",
+        "RTX_3070_Ti_Laptop",
+        "RTX_3070_Laptop",
+        "RTX_3060_Laptop",
+        "RTX_3050_Ti_Laptop",
+        "RTX_3050_Laptop",
+        "GTX_1650_Laptop",
+        "RX_7900M",
+        "RX_7800M",
+        "RX_7700S",
+        "RX_7600M_XT",
+        "RX_7600M",
+        "RX_7600S",
+        "RX_6850M_XT",
+        "RX_6800M",
+        "RX_6700M",
+        "RX_6650M",
+        "RX_6600M",
+        "RX_6500M",
+        "Radeon_780M",
+        "Radeon_760M",
+        "Radeon_740M",
+        "Radeon_680M",
+        "Intel_Arc_A770M",
+        "Intel_Arc_A730M",
+        "Intel_Arc_A570M",
+        "Intel_Arc_A370M",
+        "Intel_Iris_Xe",
+        "Intel_UHD",
+        "Apple_M3_GPU_10_Core",
+        "Apple_M3_Pro_GPU_14_Core",
+        "Apple_M3_Pro_GPU_18_Core",
+        "Apple_M3_Max_GPU_30_Core",
+        "Apple_M3_Max_GPU_40_Core",
+        "Integrated_Only"
+      ]
+    },
+    "gpuVRAM": {
+      "type": "enumeration",
+      "enum": [
+        "VRAM_Shared",
+        "VRAM_2GB",
+        "VRAM_4GB",
+        "VRAM_6GB",
+        "VRAM_8GB",
+        "VRAM_12GB",
+        "VRAM_16GB",
+        "VRAM_24GB"
+      ]
+    },
+    "gpuTGP": {
+      "type": "enumeration",
+      "enum": [
+        "TGP_35W",
+        "TGP_45W",
+        "TGP_60W",
+        "TGP_75W",
+        "TGP_80W",
+        "TGP_90W",
+        "TGP_100W",
+        "TGP_115W",
+        "TGP_125W",
+        "TGP_140W",
+        "TGP_150W",
+        "TGP_175W",
+        "TGP_200W"
+      ]
+    },
+    "ramType": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR5",
+        "LPDDR4X",
+        "LPDDR5",
+        "LPDDR5X",
+        "Unified_Memory"
+      ]
+    },
+    "ramSize": {
+      "type": "enumeration",
+      "enum": [
+        "RAM_8GB",
+        "RAM_16GB",
+        "RAM_24GB",
+        "RAM_32GB",
+        "RAM_36GB",
+        "RAM_48GB",
+        "RAM_64GB",
+        "RAM_96GB",
+        "RAM_128GB"
+      ]
+    },
+    "ramSpeed": {
+      "type": "enumeration",
+      "enum": [
+        "MTs_3200",
+        "MTs_4800",
+        "MTs_5200",
+        "MTs_5600",
+        "MTs_6000",
+        "MTs_6400",
+        "MTs_7467",
+        "MTs_7500"
+      ]
+    },
+    "ramUpgradeable": {
+      "type": "boolean",
+      "default": false
+    },
+    "ramSlots": {
+      "type": "enumeration",
+      "enum": [
+        "Soldered",
+        "Slots_1",
+        "Slots_2",
+        "Slots_1_Plus_Soldered"
+      ]
+    },
+    "storageType": {
+      "type": "enumeration",
+      "enum": [
+        "NVMe_PCIe_3_0",
+        "NVMe_PCIe_4_0",
+        "NVMe_PCIe_5_0",
+        "SATA_SSD",
+        "HDD",
+        "eMMC"
+      ]
+    },
+    "storageCapacity": {
+      "type": "enumeration",
+      "enum": [
+        "GB_128",
+        "GB_256",
+        "GB_512",
+        "TB_1",
+        "TB_2",
+        "TB_4",
+        "TB_8"
+      ]
+    },
+    "storageSlots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_1",
+        "Slots_2",
+        "Slots_3"
+      ]
+    },
+    "secondStorageSlot": {
+      "type": "boolean",
+      "default": false
+    },
+    "wirelessWiFi": {
+      "type": "enumeration",
+      "enum": [
+        "WiFi_5",
+        "WiFi_6",
+        "WiFi_6E",
+        "WiFi_7"
+      ]
+    },
+    "wirelessBluetooth": {
+      "type": "enumeration",
+      "enum": [
+        "BT_5_0",
+        "BT_5_1",
+        "BT_5_2",
+        "BT_5_3",
+        "BT_5_4"
+      ]
+    },
+    "webcam": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "HD_720p",
+        "FHD_1080p",
+        "QHD_1440p",
+        "IR_HD_720p",
+        "IR_FHD_1080p"
+      ]
+    },
+    "webcamFeatures": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "IR_Face_Recognition",
+        "Windows_Hello",
+        "Privacy_Shutter",
+        "AI_Noise_Cancelling",
+        "AV1_Encoding"
+      ]
+    },
+    "usbTypeA": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "usbTypeC": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "thunderbolt": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3"
+      ]
+    },
+    "hdmiPort": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "HDMI_1_4",
+        "HDMI_2_0",
+        "HDMI_2_1"
+      ]
+    },
+    "displayPort": {
+      "type": "boolean",
+      "default": false
+    },
+    "sdCardReader": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "microSD",
+        "SD_UHS_I",
+        "SD_UHS_II",
+        "SD_Express"
+      ]
+    },
+    "ethernetPort": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "RJ45_1Gbps",
+        "RJ45_2_5Gbps"
+      ]
+    },
+    "audioJack": {
+      "type": "boolean",
+      "default": true
+    },
+    "keyboardType": {
+      "type": "enumeration",
+      "enum": [
+        "Membrane",
+        "Mechanical",
+        "Optical_Mechanical",
+        "Scissor",
+        "Butterfly",
+        "Magic_Keyboard"
+      ]
+    },
+    "keyboardBacklight": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Single_Color",
+        "Single_Zone_RGB",
+        "Four_Zone_RGB",
+        "Per_Key_RGB"
+      ]
+    },
+    "numpad": {
+      "type": "boolean",
+      "default": false
+    },
+    "touchpad": {
+      "type": "enumeration",
+      "enum": [
+        "Standard",
+        "Precision",
+        "NumberPad_Dual",
+        "ScreenPad",
+        "Haptic",
+        "Force_Touch"
+      ]
+    },
+    "touchscreen": {
+      "type": "boolean",
+      "default": false
+    },
+    "fingerprintReader": {
+      "type": "boolean",
+      "default": false
+    },
+    "speakers": {
+      "type": "enumeration",
+      "enum": [
+        "Stereo_2W",
+        "Stereo_4W",
+        "Stereo_6W",
+        "Quad_Speaker",
+        "Six_Speaker",
+        "Harman_Kardon",
+        "Bang_Olufsen",
+        "DTS_X_Ultra",
+        "Dolby_Atmos",
+        "Force_Cancelling_Woofer"
+      ]
+    },
+    "batteryCapacity": {
+      "type": "enumeration",
+      "enum": [
+        "Wh_40",
+        "Wh_50",
+        "Wh_54",
+        "Wh_56",
+        "Wh_60",
+        "Wh_66",
+        "Wh_70",
+        "Wh_72",
+        "Wh_76",
+        "Wh_80",
+        "Wh_86",
+        "Wh_90",
+        "Wh_95",
+        "Wh_99",
+        "Wh_100"
+      ]
+    },
+    "chargerWattage": {
+      "type": "enumeration",
+      "enum": [
+        "W_45",
+        "W_65",
+        "W_90",
+        "W_100",
+        "W_120",
+        "W_140",
+        "W_150",
+        "W_180",
+        "W_200",
+        "W_240",
+        "W_280",
+        "W_300",
+        "W_330"
+      ]
+    },
+    "usbPowerDelivery": {
+      "type": "boolean",
+      "default": false
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "Kg_Under_1_0",
+        "Kg_1_0_1_3",
+        "Kg_1_3_1_5",
+        "Kg_1_5_1_8",
+        "Kg_1_8_2_0",
+        "Kg_2_0_2_3",
+        "Kg_2_3_2_5",
+        "Kg_2_5_2_8",
+        "Kg_2_8_3_0",
+        "Kg_Over_3_0"
+      ]
+    },
+    "thickness": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_15",
+        "mm_15_18",
+        "mm_18_20",
+        "mm_20_23",
+        "mm_23_25",
+        "mm_25_28",
+        "mm_28_30",
+        "mm_Over_30"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Black",
+        "White",
+        "Gray",
+        "Silver",
+        "Space_Gray",
+        "Midnight",
+        "Starlight",
+        "Eclipse_Gray",
+        "Volt_Green",
+        "Nebula_Red",
+        "Storm_Blue",
+        "Moonlight_White",
+        "Off_Black",
+        "Carbon_Fiber",
+        "Stealth_Black"
+      ]
+    },
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "Plastic",
+        "Aluminum",
+        "Magnesium_Alloy",
+        "Aluminum_Magnesium",
+        "Carbon_Fiber",
+        "Recycled_Aluminum"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "milSpec": {
+      "type": "boolean",
+      "default": false
+    },
+    "vrReady": {
+      "type": "boolean",
+      "default": false
+    },
+    "gSync": {
+      "type": "boolean",
+      "default": false
+    },
+    "freeSync": {
+      "type": "boolean",
+      "default": false
+    },
+    "muxSwitch": {
+      "type": "boolean",
+      "default": false
+    },
+    "advancedOptimus": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cpu_specifications",
+  "info": {
+    "singularName": "cpu-specification",
+    "pluralName": "cpu-specifications",
+    "displayName": "CPU Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "cpu_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "AMD",
+        "Intel"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "Ryzen_9",
+        "Ryzen_7",
+        "Ryzen_5",
+        "Ryzen_3",
+        "Ryzen_Threadripper",
+        "Ryzen_Threadripper_PRO",
+        "Core_i9",
+        "Core_i7",
+        "Core_i5",
+        "Core_i3",
+        "Core_Ultra_9",
+        "Core_Ultra_7",
+        "Core_Ultra_5",
+        "Pentium",
+        "Celeron",
+        "Xeon",
+        "EPYC"
+      ]
+    },
+    "generation": {
+      "type": "enumeration",
+      "enum": [
+        "Zen_5",
+        "Zen_4",
+        "Zen_3",
+        "Zen_2",
+        "Zen_Plus",
+        "Zen",
+        "Raptor_Lake_Refresh",
+        "Raptor_Lake",
+        "Alder_Lake",
+        "Rocket_Lake",
+        "Comet_Lake",
+        "Coffee_Lake",
+        "Arrow_Lake",
+        "Lunar_Lake",
+        "Meteor_Lake"
+      ]
+    },
+    "socket": {
+      "type": "enumeration",
+      "enum": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1200",
+        "LGA1151",
+        "LGA2066",
+        "sTRX4",
+        "sWRX8",
+        "TR4",
+        "SP5",
+        "SP3",
+        "LGA1851"
+      ]
+    },
+    "cores": {
+      "type": "enumeration",
+      "enum": [
+        "Cores_2",
+        "Cores_4",
+        "Cores_6",
+        "Cores_8",
+        "Cores_10",
+        "Cores_12",
+        "Cores_14",
+        "Cores_16",
+        "Cores_18",
+        "Cores_20",
+        "Cores_24",
+        "Cores_32",
+        "Cores_64",
+        "Cores_96",
+        "Cores_128"
+      ]
+    },
+    "threads": {
+      "type": "enumeration",
+      "enum": [
+        "Threads_2",
+        "Threads_4",
+        "Threads_8",
+        "Threads_12",
+        "Threads_16",
+        "Threads_20",
+        "Threads_24",
+        "Threads_28",
+        "Threads_32",
+        "Threads_36",
+        "Threads_40",
+        "Threads_48",
+        "Threads_64",
+        "Threads_128",
+        "Threads_192",
+        "Threads_256"
+      ]
+    },
+    "baseClock": {
+      "type": "enumeration",
+      "enum": [
+        "GHz_2_0",
+        "GHz_2_2",
+        "GHz_2_4",
+        "GHz_2_5",
+        "GHz_2_6",
+        "GHz_2_8",
+        "GHz_3_0",
+        "GHz_3_2",
+        "GHz_3_4",
+        "GHz_3_5",
+        "GHz_3_6",
+        "GHz_3_7",
+        "GHz_3_8",
+        "GHz_4_0",
+        "GHz_4_2",
+        "GHz_4_3",
+        "GHz_4_5",
+        "GHz_4_7",
+        "GHz_5_0"
+      ]
+    },
+    "boostClock": {
+      "type": "enumeration",
+      "enum": [
+        "GHz_3_5",
+        "GHz_3_8",
+        "GHz_4_0",
+        "GHz_4_2",
+        "GHz_4_4",
+        "GHz_4_5",
+        "GHz_4_6",
+        "GHz_4_7",
+        "GHz_4_8",
+        "GHz_4_9",
+        "GHz_5_0",
+        "GHz_5_1",
+        "GHz_5_2",
+        "GHz_5_3",
+        "GHz_5_4",
+        "GHz_5_5",
+        "GHz_5_6",
+        "GHz_5_7",
+        "GHz_5_8",
+        "GHz_6_0",
+        "GHz_6_2"
+      ]
+    },
+    "cacheL2": {
+      "type": "enumeration",
+      "enum": [
+        "L2_1MB",
+        "L2_2MB",
+        "L2_4MB",
+        "L2_6MB",
+        "L2_8MB",
+        "L2_12MB",
+        "L2_14MB",
+        "L2_16MB",
+        "L2_20MB",
+        "L2_24MB",
+        "L2_32MB",
+        "L2_64MB"
+      ]
+    },
+    "cacheL3": {
+      "type": "enumeration",
+      "enum": [
+        "L3_4MB",
+        "L3_8MB",
+        "L3_12MB",
+        "L3_16MB",
+        "L3_24MB",
+        "L3_30MB",
+        "L3_32MB",
+        "L3_36MB",
+        "L3_64MB",
+        "L3_96MB",
+        "L3_128MB",
+        "L3_256MB",
+        "L3_384MB"
+      ]
+    },
+    "tdp": {
+      "type": "enumeration",
+      "enum": [
+        "TDP_35W",
+        "TDP_45W",
+        "TDP_55W",
+        "TDP_65W",
+        "TDP_80W",
+        "TDP_95W",
+        "TDP_105W",
+        "TDP_125W",
+        "TDP_150W",
+        "TDP_170W",
+        "TDP_180W",
+        "TDP_200W",
+        "TDP_250W",
+        "TDP_280W",
+        "TDP_350W"
+      ]
+    },
+    "memoryType": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR5",
+        "DDR4_DDR5"
+      ]
+    },
+    "maxMemorySpeed": {
+      "type": "enumeration",
+      "enum": [
+        "MTs_2666",
+        "MTs_2933",
+        "MTs_3200",
+        "MTs_3600",
+        "MTs_4000",
+        "MTs_4400",
+        "MTs_4800",
+        "MTs_5200",
+        "MTs_5600",
+        "MTs_6000",
+        "MTs_6400",
+        "MTs_6800",
+        "MTs_7200",
+        "MTs_7600",
+        "MTs_8000",
+        "MTs_8400",
+        "MTs_8800"
+      ]
+    },
+    "maxMemory": {
+      "type": "enumeration",
+      "enum": [
+        "RAM_64GB",
+        "RAM_128GB",
+        "RAM_192GB",
+        "RAM_256GB",
+        "RAM_512GB",
+        "RAM_1TB",
+        "RAM_2TB",
+        "RAM_4TB"
+      ]
+    },
+    "memoryChannels": {
+      "type": "enumeration",
+      "enum": [
+        "Channels_2",
+        "Channels_4",
+        "Channels_6",
+        "Channels_8"
+      ]
+    },
+    "pcieLanes": {
+      "type": "enumeration",
+      "enum": [
+        "Lanes_16",
+        "Lanes_20",
+        "Lanes_24",
+        "Lanes_28",
+        "Lanes_32",
+        "Lanes_44",
+        "Lanes_48",
+        "Lanes_64",
+        "Lanes_80",
+        "Lanes_112",
+        "Lanes_128"
+      ]
+    },
+    "pcieVersion": {
+      "type": "enumeration",
+      "enum": [
+        "PCIe_3_0",
+        "PCIe_4_0",
+        "PCIe_5_0"
+      ]
+    },
+    "integratedGraphics": {
+      "type": "boolean",
+      "default": false
+    },
+    "igpuModel": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Radeon_Graphics",
+        "Radeon_Vega_3",
+        "Radeon_Vega_6",
+        "Radeon_Vega_7",
+        "Radeon_Vega_8",
+        "Radeon_Vega_11",
+        "Radeon_780M",
+        "Radeon_760M",
+        "Radeon_740M",
+        "Intel_UHD_610",
+        "Intel_UHD_630",
+        "Intel_UHD_730",
+        "Intel_UHD_770",
+        "Intel_Iris_Xe",
+        "Intel_Arc"
+      ]
+    },
+    "coolerIncluded": {
+      "type": "boolean",
+      "default": false
+    },
+    "lithograpy": {
+      "type": "enumeration",
+      "enum": [
+        "nm_3",
+        "nm_4",
+        "nm_5",
+        "nm_6",
+        "nm_7",
+        "nm_10",
+        "nm_12",
+        "nm_14"
+      ]
+    }
+  }
+}

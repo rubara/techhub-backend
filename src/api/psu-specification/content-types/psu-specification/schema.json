@@ -1,0 +1,335 @@
+{
+  "kind": "collectionType",
+  "collectionName": "psu_specifications",
+  "info": {
+    "singularName": "psu-specification",
+    "pluralName": "psu-specifications",
+    "displayName": "PSU Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "psu_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Corsair",
+        "Seasonic",
+        "EVGA",
+        "be_quiet",
+        "Cooler_Master",
+        "Thermaltake",
+        "NZXT",
+        "MSI",
+        "ASUS",
+        "Gigabyte",
+        "Silverstone",
+        "Fractal_Design",
+        "Lian_Li",
+        "Super_Flower",
+        "FSP",
+        "Antec",
+        "XPG",
+        "Phanteks",
+        "DeepCool",
+        "Montech"
+      ]
+    },
+    "wattage": {
+      "type": "enumeration",
+      "enum": [
+        "W_300",
+        "W_350",
+        "W_400",
+        "W_450",
+        "W_500",
+        "W_550",
+        "W_600",
+        "W_650",
+        "W_700",
+        "W_750",
+        "W_800",
+        "W_850",
+        "W_900",
+        "W_1000",
+        "W_1050",
+        "W_1100",
+        "W_1200",
+        "W_1300",
+        "W_1500",
+        "W_1600",
+        "W_1800",
+        "W_2000"
+      ]
+    },
+    "efficiency": {
+      "type": "enumeration",
+      "enum": [
+        "Standard_80Plus",
+        "Bronze_80Plus",
+        "Silver_80Plus",
+        "Gold_80Plus",
+        "Platinum_80Plus",
+        "Titanium_80Plus",
+        "Cybenetics_Standard",
+        "Cybenetics_Bronze",
+        "Cybenetics_Silver",
+        "Cybenetics_Gold",
+        "Cybenetics_Platinum",
+        "Cybenetics_Diamond"
+      ]
+    },
+    "modular": {
+      "type": "enumeration",
+      "enum": [
+        "Non_Modular",
+        "Semi_Modular",
+        "Fully_Modular"
+      ]
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "ATX",
+        "ATX_3_0",
+        "ATX_3_1",
+        "SFX",
+        "SFX_L",
+        "TFX",
+        "Flex_ATX",
+        "EPS"
+      ]
+    },
+    "fanSize": {
+      "type": "enumeration",
+      "enum": [
+        "Fan_80mm",
+        "Fan_92mm",
+        "Fan_120mm",
+        "Fan_135mm",
+        "Fan_140mm",
+        "Fanless"
+      ]
+    },
+    "fanBearing": {
+      "type": "enumeration",
+      "enum": [
+        "Sleeve",
+        "Rifle",
+        "Hydraulic",
+        "Fluid_Dynamic",
+        "Magnetic_Levitation",
+        "Double_Ball"
+      ]
+    },
+    "semiPassive": {
+      "type": "boolean",
+      "default": false
+    },
+    "railType": {
+      "type": "enumeration",
+      "enum": [
+        "Single_Rail",
+        "Multi_Rail"
+      ]
+    },
+    "plus12VRail": {
+      "type": "enumeration",
+      "enum": [
+        "Amps_20A",
+        "Amps_25A",
+        "Amps_30A",
+        "Amps_35A",
+        "Amps_40A",
+        "Amps_45A",
+        "Amps_50A",
+        "Amps_55A",
+        "Amps_60A",
+        "Amps_65A",
+        "Amps_70A",
+        "Amps_75A",
+        "Amps_80A",
+        "Amps_83A",
+        "Amps_90A",
+        "Amps_100A",
+        "Amps_110A",
+        "Amps_120A",
+        "Amps_130A",
+        "Amps_150A",
+        "Amps_166A"
+      ]
+    },
+    "atxConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Pin_20",
+        "Pin_20_Plus_4",
+        "Pin_24"
+      ]
+    },
+    "eps12VConnector": {
+      "type": "enumeration",
+      "enum": [
+        "EPS_None",
+        "EPS_4pin",
+        "EPS_8pin",
+        "EPS_4_Plus_4pin",
+        "EPS_8_Plus_4pin",
+        "EPS_8_Plus_8pin",
+        "EPS_8_Plus_8_Plus_4pin",
+        "EPS_8_Plus_8_Plus_8pin"
+      ]
+    },
+    "pcie12VHPWRConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_None",
+        "Connector_12VHPWR_1",
+        "Connector_12VHPWR_2",
+        "Connector_12V2x6_1",
+        "Connector_12V2x6_2",
+        "Connector_12V2x6_3",
+        "Connector_12V2x6_4"
+      ]
+    },
+    "pcie8pinConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_0",
+        "Connector_1",
+        "Connector_2",
+        "Connector_3",
+        "Connector_4",
+        "Connector_5",
+        "Connector_6",
+        "Connector_8",
+        "Connector_10",
+        "Connector_12"
+      ]
+    },
+    "pci6Plus2pinConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_0",
+        "Connector_1",
+        "Connector_2",
+        "Connector_3",
+        "Connector_4",
+        "Connector_5",
+        "Connector_6",
+        "Connector_8",
+        "Connector_10",
+        "Connector_12"
+      ]
+    },
+    "sataConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_0",
+        "Connector_2",
+        "Connector_3",
+        "Connector_4",
+        "Connector_5",
+        "Connector_6",
+        "Connector_8",
+        "Connector_10",
+        "Connector_12",
+        "Connector_14",
+        "Connector_16"
+      ]
+    },
+    "molexConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_0",
+        "Connector_1",
+        "Connector_2",
+        "Connector_3",
+        "Connector_4",
+        "Connector_5",
+        "Connector_6"
+      ]
+    },
+    "floppyConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Connector_0",
+        "Connector_1",
+        "Connector_2"
+      ]
+    },
+    "protections": {
+      "type": "enumeration",
+      "enum": [
+        "Basic_OVP_OCP_SCP",
+        "Standard_OVP_OCP_SCP_OPP",
+        "Full_OVP_OCP_SCP_OPP_UVP",
+        "Premium_OVP_OCP_SCP_OPP_UVP_OTP",
+        "Complete_OVP_OCP_SCP_OPP_UVP_OTP_SIP"
+      ]
+    },
+    "length": {
+      "type": "enumeration",
+      "enum": [
+        "Length_100mm",
+        "Length_120mm",
+        "Length_125mm",
+        "Length_130mm",
+        "Length_140mm",
+        "Length_150mm",
+        "Length_160mm",
+        "Length_165mm",
+        "Length_170mm",
+        "Length_180mm",
+        "Length_190mm",
+        "Length_200mm",
+        "Length_210mm",
+        "Length_220mm",
+        "Length_230mm"
+      ]
+    },
+    "warranty": {
+      "type": "enumeration",
+      "enum": [
+        "Years_1",
+        "Years_2",
+        "Years_3",
+        "Years_5",
+        "Years_7",
+        "Years_10",
+        "Years_12",
+        "Years_15"
+      ]
+    },
+    "cableType": {
+      "type": "enumeration",
+      "enum": [
+        "Standard_Black",
+        "Flat_Black",
+        "Sleeved",
+        "Individually_Sleeved",
+        "Custom_CableMod",
+        "Ribbon"
+      ]
+    },
+    "atx30Compatible": {
+      "type": "boolean",
+      "default": false
+    },
+    "pcie50Ready": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

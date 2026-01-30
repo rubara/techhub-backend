@@ -1,0 +1,393 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keyboard_specifications",
+  "info": {
+    "singularName": "keyboard-specification",
+    "pluralName": "keyboard-specifications",
+    "displayName": "Keyboard Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "keyboard_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Logitech",
+        "Razer",
+        "Corsair",
+        "SteelSeries",
+        "HyperX",
+        "ASUS_ROG",
+        "Ducky",
+        "Keychron",
+        "Glorious",
+        "Wooting",
+        "GMMK",
+        "Roccat",
+        "Cooler_Master",
+        "MSI",
+        "Gigabyte",
+        "Cherry",
+        "Das_Keyboard",
+        "Leopold",
+        "Varmilo",
+        "Anne_Pro",
+        "Akko",
+        "NuPhy",
+        "IQUNIX",
+        "Epomaker",
+        "Royal_Kludge",
+        "Redragon",
+        "Fnatic",
+        "Mountain",
+        "Endgame_Gear"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Mechanical",
+        "Optical_Mechanical",
+        "Membrane",
+        "Scissor",
+        "Topre",
+        "Hall_Effect",
+        "Hybrid"
+      ]
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "Full_Size_100",
+        "TKL_80",
+        "Compact_75",
+        "Compact_65",
+        "Compact_60",
+        "Compact_40",
+        "Numpad",
+        "Ergonomic",
+        "Split"
+      ]
+    },
+    "switchBrand": {
+      "type": "enumeration",
+      "enum": [
+        "Cherry_MX",
+        "Gateron",
+        "Kailh",
+        "Razer",
+        "Logitech",
+        "SteelSeries",
+        "Romer_G",
+        "HyperX",
+        "Outemu",
+        "Akko",
+        "TTC",
+        "Glorious",
+        "Wooting",
+        "Holy_Panda",
+        "Zealios",
+        "Boba",
+        "Durock",
+        "JWK",
+        "SP_Star",
+        "Tecsee",
+        "Custom_Hotswap"
+      ]
+    },
+    "switchType": {
+      "type": "enumeration",
+      "enum": [
+        "Linear_Red",
+        "Linear_Black",
+        "Linear_Yellow",
+        "Linear_Speed_Silver",
+        "Tactile_Brown",
+        "Tactile_Clear",
+        "Tactile_Orange",
+        "Clicky_Blue",
+        "Clicky_Green",
+        "Clicky_White",
+        "Silent_Red",
+        "Silent_Black",
+        "Silent_Brown",
+        "Optical_Red",
+        "Optical_Purple",
+        "Magnetic_Hall_Effect",
+        "Low_Profile_Red",
+        "Low_Profile_Brown",
+        "Low_Profile_Blue"
+      ]
+    },
+    "actuationForce": {
+      "type": "enumeration",
+      "enum": [
+        "Force_35g",
+        "Force_40g",
+        "Force_45g",
+        "Force_50g",
+        "Force_55g",
+        "Force_60g",
+        "Force_65g",
+        "Force_67g",
+        "Force_70g",
+        "Force_80g"
+      ]
+    },
+    "actuationPoint": {
+      "type": "enumeration",
+      "enum": [
+        "mm_0_1",
+        "mm_0_2",
+        "mm_0_4",
+        "mm_1_0",
+        "mm_1_2",
+        "mm_1_5",
+        "mm_1_8",
+        "mm_2_0",
+        "mm_2_2",
+        "mm_2_5",
+        "mm_3_0",
+        "mm_4_0",
+        "Adjustable"
+      ]
+    },
+    "totalTravel": {
+      "type": "enumeration",
+      "enum": [
+        "mm_2_5",
+        "mm_3_0",
+        "mm_3_2",
+        "mm_3_5",
+        "mm_3_7",
+        "mm_4_0"
+      ]
+    },
+    "hotSwappable": {
+      "type": "boolean",
+      "default": false
+    },
+    "nKeyRollover": {
+      "type": "enumeration",
+      "enum": [
+        "NKRO_6",
+        "NKRO_10",
+        "NKRO_Full"
+      ]
+    },
+    "pollingRate": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_125",
+        "Hz_250",
+        "Hz_500",
+        "Hz_1000",
+        "Hz_2000",
+        "Hz_4000",
+        "Hz_8000"
+      ]
+    },
+    "antiGhosting": {
+      "type": "boolean",
+      "default": true
+    },
+    "connectivity": {
+      "type": "enumeration",
+      "enum": [
+        "Wired_USB",
+        "Wireless_2_4GHz",
+        "Bluetooth",
+        "Wired_Wireless_2_4GHz",
+        "Wired_Bluetooth",
+        "Wireless_2_4GHz_Bluetooth",
+        "Wired_Wireless_2_4GHz_Bluetooth"
+      ]
+    },
+    "cableType": {
+      "type": "enumeration",
+      "enum": [
+        "Fixed",
+        "Detachable_USB_C",
+        "Detachable_USB_A",
+        "Detachable_Micro_USB",
+        "Braided_Fixed",
+        "Braided_Detachable",
+        "Coiled_Detachable"
+      ]
+    },
+    "cableLength": {
+      "type": "enumeration",
+      "enum": [
+        "m_1_0",
+        "m_1_5",
+        "m_1_8",
+        "m_2_0",
+        "m_2_5",
+        "m_3_0"
+      ]
+    },
+    "batteryLife": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Hours_30",
+        "Hours_40",
+        "Hours_50",
+        "Hours_70",
+        "Hours_100",
+        "Hours_150",
+        "Hours_200",
+        "Hours_300",
+        "Hours_400",
+        "Hours_1000"
+      ]
+    },
+    "keycapMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "ABS",
+        "PBT",
+        "POM",
+        "Double_Shot_ABS",
+        "Double_Shot_PBT",
+        "Pudding_PBT",
+        "Shine_Through_ABS"
+      ]
+    },
+    "keycapProfile": {
+      "type": "enumeration",
+      "enum": [
+        "OEM",
+        "Cherry",
+        "SA",
+        "DSA",
+        "XDA",
+        "MT3",
+        "KAT",
+        "MDA",
+        "Low_Profile"
+      ]
+    },
+    "backlighting": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Single_Color",
+        "RGB_Single_Zone",
+        "RGB_Per_Key"
+      ]
+    },
+    "rgbZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Underglow",
+        "Per_Key",
+        "Per_Key_Underglow",
+        "Side_Lights",
+        "Full_Body"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logitech_G_Hub",
+        "Razer_Synapse",
+        "Corsair_iCUE",
+        "SteelSeries_GG",
+        "HyperX_NGENUITY",
+        "ASUS_Armoury_Crate",
+        "Glorious_Core",
+        "Wooting_Wootility",
+        "Keychron_Via",
+        "QMK_VIA",
+        "Roccat_Swarm",
+        "Cooler_Master_Portal"
+      ]
+    },
+    "onboardMemory": {
+      "type": "boolean",
+      "default": false
+    },
+    "macroKeys": {
+      "type": "boolean",
+      "default": false
+    },
+    "mediaControls": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Fn_Shortcuts",
+        "Dedicated_Buttons",
+        "Volume_Wheel",
+        "Volume_Roller",
+        "Full_Media_Deck"
+      ]
+    },
+    "wristRest": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Included_Plastic",
+        "Included_Fabric",
+        "Included_Leatherette",
+        "Included_Memory_Foam",
+        "Included_Magnetic",
+        "Sold_Separately"
+      ]
+    },
+    "usbPassthrough": {
+      "type": "boolean",
+      "default": false
+    },
+    "audioPassthrough": {
+      "type": "boolean",
+      "default": false
+    },
+    "frameMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Plastic",
+        "Aluminum",
+        "Aluminum_Top_Plate",
+        "Steel",
+        "Polycarbonate",
+        "Wood",
+        "Acrylic"
+      ]
+    },
+    "gasketMount": {
+      "type": "boolean",
+      "default": false
+    },
+    "soundDampening": {
+      "type": "boolean",
+      "default": false
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "g_Under_500",
+        "g_500_700",
+        "g_700_900",
+        "g_900_1100",
+        "g_1100_1300",
+        "g_1300_1500",
+        "g_Over_1500"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

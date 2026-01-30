@@ -1,0 +1,418 @@
+{
+  "kind": "collectionType",
+  "collectionName": "motherboard_specifications",
+  "info": {
+    "singularName": "motherboard-specification",
+    "pluralName": "motherboard-specifications",
+    "displayName": "Motherboard Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "motherboard_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "ASUS",
+        "MSI",
+        "Gigabyte",
+        "ASRock",
+        "EVGA",
+        "NZXT",
+        "Biostar",
+        "Supermicro"
+      ]
+    },
+    "socket": {
+      "type": "enumeration",
+      "enum": [
+        "AM4",
+        "AM5",
+        "LGA1700",
+        "LGA1200",
+        "LGA1151",
+        "LGA2066",
+        "sTRX4",
+        "sWRX8",
+        "TR4",
+        "SP5",
+        "SP3",
+        "LGA1851"
+      ]
+    },
+    "chipset": {
+      "type": "enumeration",
+      "enum": [
+        "X870E",
+        "X870",
+        "X670E",
+        "X670",
+        "B850",
+        "B650E",
+        "B650",
+        "A620",
+        "X570",
+        "B550",
+        "A520",
+        "X470",
+        "B450",
+        "Z890",
+        "Z790",
+        "B760",
+        "H770",
+        "Z690",
+        "B660",
+        "H670",
+        "H610",
+        "Z590",
+        "B560",
+        "H570",
+        "Z490",
+        "B460",
+        "H470",
+        "W790",
+        "X299",
+        "TRX40",
+        "WRX80",
+        "WRX90"
+      ]
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "E_ATX",
+        "ATX",
+        "Micro_ATX",
+        "Mini_ITX",
+        "Mini_DTX",
+        "SSI_CEB",
+        "SSI_EEB"
+      ]
+    },
+    "memoryType": {
+      "type": "enumeration",
+      "enum": [
+        "DDR4",
+        "DDR5"
+      ]
+    },
+    "memorySlot": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_2",
+        "Slots_4",
+        "Slots_8"
+      ]
+    },
+    "maxMemory": {
+      "type": "enumeration",
+      "enum": [
+        "RAM_32GB",
+        "RAM_64GB",
+        "RAM_128GB",
+        "RAM_192GB",
+        "RAM_256GB",
+        "RAM_512GB",
+        "RAM_1TB",
+        "RAM_2TB"
+      ]
+    },
+    "maxMemorySpeed": {
+      "type": "enumeration",
+      "enum": [
+        "MTs_2666",
+        "MTs_2933",
+        "MTs_3200",
+        "MTs_3600",
+        "MTs_4000",
+        "MTs_4400",
+        "MTs_4800",
+        "MTs_5200",
+        "MTs_5600",
+        "MTs_6000",
+        "MTs_6400",
+        "MTs_6800",
+        "MTs_7200",
+        "MTs_7600",
+        "MTs_8000",
+        "MTs_8200",
+        "MTs_8400",
+        "MTs_8600",
+        "MTs_8800",
+        "MTs_9000"
+      ]
+    },
+    "pcieX16Slots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "pcieX4Slots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "pcieX1Slots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "pcieVersion": {
+      "type": "enumeration",
+      "enum": [
+        "PCIe_3_0",
+        "PCIe_4_0",
+        "PCIe_5_0"
+      ]
+    },
+    "m2Slots": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4",
+        "Slots_5",
+        "Slots_6"
+      ]
+    },
+    "m2NvmeGen5": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "m2NvmeGen4": {
+      "type": "enumeration",
+      "enum": [
+        "Slots_0",
+        "Slots_1",
+        "Slots_2",
+        "Slots_3",
+        "Slots_4"
+      ]
+    },
+    "sataConnectors": {
+      "type": "enumeration",
+      "enum": [
+        "SATA_0",
+        "SATA_2",
+        "SATA_4",
+        "SATA_6",
+        "SATA_8",
+        "SATA_10",
+        "SATA_12"
+      ]
+    },
+    "usb32Gen2x2": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "usb32Gen2": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4",
+        "Ports_5",
+        "Ports_6"
+      ]
+    },
+    "usb32Gen1": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4",
+        "Ports_5",
+        "Ports_6",
+        "Ports_8",
+        "Ports_10"
+      ]
+    },
+    "usb20": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_2",
+        "Ports_4",
+        "Ports_6"
+      ]
+    },
+    "usbTypeC": {
+      "type": "enumeration",
+      "enum": [
+        "Ports_0",
+        "Ports_1",
+        "Ports_2",
+        "Ports_3",
+        "Ports_4"
+      ]
+    },
+    "lan": {
+      "type": "enumeration",
+      "enum": [
+        "LAN_1Gbps",
+        "LAN_2_5Gbps",
+        "LAN_5Gbps",
+        "LAN_10Gbps",
+        "LAN_Dual_1Gbps",
+        "LAN_Dual_2_5Gbps",
+        "LAN_1Gbps_Plus_2_5Gbps",
+        "LAN_2_5Gbps_Plus_10Gbps"
+      ]
+    },
+    "wifi": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "WiFi_5",
+        "WiFi_6",
+        "WiFi_6E",
+        "WiFi_7"
+      ]
+    },
+    "bluetooth": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "BT_4_2",
+        "BT_5_0",
+        "BT_5_1",
+        "BT_5_2",
+        "BT_5_3",
+        "BT_5_4"
+      ]
+    },
+    "audioChipset": {
+      "type": "enumeration",
+      "enum": [
+        "Realtek_ALC887",
+        "Realtek_ALC892",
+        "Realtek_ALC897",
+        "Realtek_ALC1150",
+        "Realtek_ALC1200",
+        "Realtek_ALC1220",
+        "Realtek_ALC4080",
+        "Realtek_ALC4082",
+        "ROG_SupremeFX",
+        "Nahimic",
+        "Sound_BlasterX",
+        "ESS_Sabre"
+      ]
+    },
+    "audioChannels": {
+      "type": "enumeration",
+      "enum": [
+        "Audio_2_1",
+        "Audio_5_1",
+        "Audio_7_1"
+      ]
+    },
+    "rgbHeaders": {
+      "type": "enumeration",
+      "enum": [
+        "Headers_0",
+        "Headers_1",
+        "Headers_2",
+        "Headers_3",
+        "Headers_4",
+        "Headers_5",
+        "Headers_6"
+      ]
+    },
+    "argbHeaders": {
+      "type": "enumeration",
+      "enum": [
+        "Headers_0",
+        "Headers_1",
+        "Headers_2",
+        "Headers_3",
+        "Headers_4",
+        "Headers_5",
+        "Headers_6"
+      ]
+    },
+    "fanHeaders": {
+      "type": "enumeration",
+      "enum": [
+        "Headers_2",
+        "Headers_3",
+        "Headers_4",
+        "Headers_5",
+        "Headers_6",
+        "Headers_7",
+        "Headers_8",
+        "Headers_10",
+        "Headers_12"
+      ]
+    },
+    "internalUSBHeaders": {
+      "type": "enumeration",
+      "enum": [
+        "Headers_0",
+        "Headers_1",
+        "Headers_2",
+        "Headers_3",
+        "Headers_4"
+      ]
+    },
+    "thunderbolt": {
+      "type": "boolean",
+      "default": false
+    },
+    "biosFlashback": {
+      "type": "boolean",
+      "default": false
+    },
+    "dualBios": {
+      "type": "boolean",
+      "default": false
+    },
+    "postDisplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

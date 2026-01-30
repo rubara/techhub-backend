@@ -1,0 +1,301 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mousepad_specifications",
+  "info": {
+    "singularName": "mousepad-specification",
+    "pluralName": "mousepad-specifications",
+    "displayName": "Mousepad Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "mousepad_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Logitech",
+        "Razer",
+        "Corsair",
+        "SteelSeries",
+        "HyperX",
+        "ASUS",
+        "Zowie",
+        "Pulsar",
+        "Artisan",
+        "Lethal_Gaming_Gear",
+        "Glorious",
+        "Roccat",
+        "Cooler_Master",
+        "MSI",
+        "Gigabyte",
+        "Endgame_Gear",
+        "Xtrfy",
+        "X_Raypad",
+        "Fnatic",
+        "Vaxee",
+        "Mad_Catz",
+        "Cougar",
+        "NZXT",
+        "Thermaltake",
+        "Skypad",
+        "Esports_Tiger",
+        "Aqua_Control",
+        "Dream_Machines"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "G_Series",
+        "PowerPlay",
+        "Goliathus",
+        "Strider",
+        "Firefly",
+        "Gigantus",
+        "Sphex",
+        "MM_Series",
+        "QcK",
+        "QcK_Edge",
+        "QcK_Heavy",
+        "QcK_Prism",
+        "Fury_S",
+        "Fury_Ultra",
+        "Pulsefire",
+        "ROG_Sheath",
+        "ROG_Scabbard",
+        "ROG_Balteus",
+        "ROG_Strix",
+        "TUF_Gaming",
+        "G_SR",
+        "G_SR_SE",
+        "P_TF",
+        "PTF_X",
+        "Superglide",
+        "Hien",
+        "Hayate",
+        "Zero",
+        "Raiden",
+        "Otsu",
+        "Saturn",
+        "Venus",
+        "Jupiter",
+        "Mercury",
+        "GP_Series",
+        "GP_Perimeter",
+        "Ice",
+        "Hyper_Pad",
+        "Agility",
+        "GD_Series",
+        "AORUS",
+        "Storm",
+        "Focus",
+        "Dash",
+        "Boost"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Soft_Cloth",
+        "Hybrid",
+        "Hard",
+        "Glass",
+        "Ceramic",
+        "Cordura",
+        "Silicone"
+      ]
+    },
+    "surface": {
+      "type": "enumeration",
+      "enum": [
+        "Speed",
+        "Control",
+        "Balanced",
+        "Speed_Control_Hybrid",
+        "Textured",
+        "Smooth",
+        "Poron"
+      ]
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "Small",
+        "Medium",
+        "Large",
+        "XL",
+        "XXL",
+        "XXXL",
+        "Extended",
+        "Desk_Mat",
+        "Custom"
+      ]
+    },
+    "length": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_300",
+        "mm_300_350",
+        "mm_350_400",
+        "mm_400_450",
+        "mm_450_500",
+        "mm_500_600",
+        "mm_600_700",
+        "mm_700_800",
+        "mm_800_900",
+        "mm_900_1000",
+        "mm_Over_1000"
+      ]
+    },
+    "width": {
+      "type": "enumeration",
+      "enum": [
+        "mm_Under_250",
+        "mm_250_300",
+        "mm_300_350",
+        "mm_350_400",
+        "mm_400_450",
+        "mm_450_500",
+        "mm_Over_500"
+      ]
+    },
+    "thickness": {
+      "type": "enumeration",
+      "enum": [
+        "mm_1",
+        "mm_2",
+        "mm_3",
+        "mm_4",
+        "mm_5",
+        "mm_6"
+      ]
+    },
+    "baseMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Rubber",
+        "Natural_Rubber",
+        "Silicone",
+        "Foam",
+        "Poron",
+        "Non_Slip_Rubber",
+        "Anti_Slip_Coating"
+      ]
+    },
+    "surfaceMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Cloth",
+        "Micro_Textured_Cloth",
+        "Cordura_Fabric",
+        "Polyester",
+        "Nylon",
+        "Hard_Polymer",
+        "Glass",
+        "Tempered_Glass",
+        "Ceramic",
+        "Hybrid_Weave",
+        "Lycra"
+      ]
+    },
+    "stitchedEdges": {
+      "type": "boolean",
+      "default": false
+    },
+    "waterResistant": {
+      "type": "boolean",
+      "default": false
+    },
+    "washable": {
+      "type": "boolean",
+      "default": false
+    },
+    "glide": {
+      "type": "enumeration",
+      "enum": [
+        "Low_Friction",
+        "Medium_Friction",
+        "High_Friction",
+        "Adjustable"
+      ]
+    },
+    "stoppingPower": {
+      "type": "enumeration",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Very_High"
+      ]
+    },
+    "humidityResistant": {
+      "type": "boolean",
+      "default": false
+    },
+    "wirelessCharging": {
+      "type": "boolean",
+      "default": false
+    },
+    "wirelessChargingCompatibility": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Logitech_PowerPlay",
+        "Razer_HyperFlux",
+        "Corsair_Qi",
+        "Universal_Qi"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgbZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Perimeter",
+        "Multi_Zone",
+        "Full_Surface"
+      ]
+    },
+    "rgbConnector": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "USB_A",
+        "USB_C",
+        "Micro_USB"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logitech_G_Hub",
+        "Razer_Synapse",
+        "Corsair_iCUE",
+        "SteelSeries_GG",
+        "HyperX_NGENUITY",
+        "ASUS_Armoury_Crate",
+        "Roccat_Swarm",
+        "Cooler_Master_Portal"
+      ]
+    },
+    "usbPassthrough": {
+      "type": "boolean",
+      "default": false
+    },
+    "cableManagement": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

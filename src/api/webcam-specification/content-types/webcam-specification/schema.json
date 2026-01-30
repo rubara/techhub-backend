@@ -1,0 +1,481 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webcam_specifications",
+  "info": {
+    "singularName": "webcam-specification",
+    "pluralName": "webcam-specifications",
+    "displayName": "Webcam Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "webcam_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Logitech",
+        "Razer",
+        "Elgato",
+        "ASUS",
+        "AVerMedia",
+        "Insta360",
+        "Obsbot",
+        "Sony",
+        "Canon",
+        "Panasonic",
+        "Microsoft",
+        "Dell",
+        "HP",
+        "Lenovo",
+        "Creative",
+        "NZXT",
+        "Corsair",
+        "HyperX",
+        "Anker",
+        "Poly",
+        "Jabra",
+        "Nexigo",
+        "EMEET",
+        "Hollyland"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "Brio",
+        "StreamCam",
+        "C_Series",
+        "MX_Brio",
+        "Kiyo",
+        "Kiyo_Pro",
+        "Kiyo_X",
+        "Facecam",
+        "Facecam_Pro",
+        "Facecam_MK_2",
+        "ROG_Eye",
+        "ROG_Eye_S",
+        "TUF_Gaming",
+        "Live_Streamer",
+        "PW_Series",
+        "Link",
+        "Tiny",
+        "Tiny_2",
+        "Tail_Air",
+        "Meeting",
+        "Meeting_Capsule",
+        "ZV_Series",
+        "EOS",
+        "Lumix",
+        "LifeCam",
+        "Modern",
+        "UltraSharp",
+        "Poly_Studio"
+      ]
+    },
+    "resolution": {
+      "type": "enumeration",
+      "enum": [
+        "HD_720p",
+        "FHD_1080p",
+        "QHD_1440p",
+        "UHD_4K",
+        "UHD_4K_HDR"
+      ]
+    },
+    "maxResolutionFramerate": {
+      "type": "enumeration",
+      "enum": [
+        "p720_30fps",
+        "p720_60fps",
+        "p1080_24fps",
+        "p1080_30fps",
+        "p1080_60fps",
+        "p1080_120fps",
+        "p1440_30fps",
+        "p1440_60fps",
+        "p4K_24fps",
+        "p4K_30fps",
+        "p4K_60fps"
+      ]
+    },
+    "sensorType": {
+      "type": "enumeration",
+      "enum": [
+        "CMOS",
+        "Sony_CMOS",
+        "Sony_Starvis",
+        "Sony_Exmor",
+        "Sony_Exmor_R",
+        "Custom_CMOS"
+      ]
+    },
+    "sensorSize": {
+      "type": "enumeration",
+      "enum": [
+        "Inch_1_4",
+        "Inch_1_2_8",
+        "Inch_1_2_5",
+        "Inch_1_2_3",
+        "Inch_1_2",
+        "Inch_1_1_8",
+        "Inch_1",
+        "Inch_4_3",
+        "APS_C",
+        "Full_Frame"
+      ]
+    },
+    "fieldOfView": {
+      "type": "enumeration",
+      "enum": [
+        "FOV_60",
+        "FOV_65",
+        "FOV_70",
+        "FOV_75",
+        "FOV_78",
+        "FOV_80",
+        "FOV_82",
+        "FOV_84",
+        "FOV_87",
+        "FOV_90",
+        "FOV_95",
+        "FOV_100",
+        "FOV_110",
+        "FOV_120",
+        "FOV_Adjustable"
+      ]
+    },
+    "fovAdjustable": {
+      "type": "boolean",
+      "default": false
+    },
+    "aperture": {
+      "type": "enumeration",
+      "enum": [
+        "f_1_4",
+        "f_1_8",
+        "f_2_0",
+        "f_2_2",
+        "f_2_4",
+        "f_2_8",
+        "f_3_2",
+        "f_4_0",
+        "Variable"
+      ]
+    },
+    "focusType": {
+      "type": "enumeration",
+      "enum": [
+        "Fixed",
+        "Manual",
+        "Autofocus",
+        "Autofocus_Manual"
+      ]
+    },
+    "autofocusType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Standard",
+        "Fast",
+        "Face_Tracking",
+        "Eye_Tracking",
+        "AI_Powered",
+        "Phase_Detection",
+        "Contrast_Detection",
+        "Hybrid"
+      ]
+    },
+    "hdr": {
+      "type": "boolean",
+      "default": false
+    },
+    "hdrType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "HDR",
+        "HDR10",
+        "Auto_HDR",
+        "WDR"
+      ]
+    },
+    "lowLightCorrection": {
+      "type": "boolean",
+      "default": false
+    },
+    "lowLightType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Basic",
+        "Advanced",
+        "AI_Enhanced",
+        "RightLight",
+        "Starvis"
+      ]
+    },
+    "exposureControl": {
+      "type": "enumeration",
+      "enum": [
+        "Auto_Only",
+        "Auto_Manual",
+        "Full_Manual"
+      ]
+    },
+    "whiteBalanceControl": {
+      "type": "enumeration",
+      "enum": [
+        "Auto_Only",
+        "Auto_Manual",
+        "Full_Manual",
+        "Presets"
+      ]
+    },
+    "zoomType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Digital_2x",
+        "Digital_3x",
+        "Digital_4x",
+        "Digital_5x",
+        "Digital_8x",
+        "Optical",
+        "Optical_Digital"
+      ]
+    },
+    "panTiltZoom": {
+      "type": "boolean",
+      "default": false
+    },
+    "aiTracking": {
+      "type": "boolean",
+      "default": false
+    },
+    "aiTrackingFeatures": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Face_Tracking",
+        "Upper_Body_Tracking",
+        "Hand_Tracking",
+        "Group_Tracking",
+        "Gesture_Control",
+        "Auto_Framing",
+        "Object_Tracking",
+        "Whiteboard_Mode"
+      ]
+    },
+    "gimbal": {
+      "type": "boolean",
+      "default": false
+    },
+    "gimbalAxes": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Axis_2",
+        "Axis_3"
+      ]
+    },
+    "microphone": {
+      "type": "boolean",
+      "default": true
+    },
+    "microphoneType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Mono",
+        "Stereo",
+        "Dual_Omnidirectional",
+        "Beamforming",
+        "Noise_Cancelling",
+        "AI_Noise_Removal"
+      ]
+    },
+    "microphoneFrequency": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Hz_100_8000",
+        "Hz_100_10000",
+        "Hz_90_16000",
+        "Hz_80_20000",
+        "Hz_50_20000"
+      ]
+    },
+    "privacyShutter": {
+      "type": "boolean",
+      "default": false
+    },
+    "privacyShutterType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Physical_Slider",
+        "Physical_Cover",
+        "Magnetic_Cap",
+        "Electronic",
+        "Lens_Cap"
+      ]
+    },
+    "indicatorLight": {
+      "type": "boolean",
+      "default": true
+    },
+    "connectivity": {
+      "type": "enumeration",
+      "enum": [
+        "USB_A",
+        "USB_C",
+        "USB_A_USB_C",
+        "Wireless",
+        "Bluetooth",
+        "WiFi",
+        "Ethernet",
+        "USB_HDMI"
+      ]
+    },
+    "usbVersion": {
+      "type": "enumeration",
+      "enum": [
+        "USB_2_0",
+        "USB_3_0",
+        "USB_3_1",
+        "USB_3_2"
+      ]
+    },
+    "cableLength": {
+      "type": "enumeration",
+      "enum": [
+        "m_1_0",
+        "m_1_2",
+        "m_1_5",
+        "m_1_8",
+        "m_2_0",
+        "m_2_5",
+        "m_3_0",
+        "Detachable"
+      ]
+    },
+    "cableDetachable": {
+      "type": "boolean",
+      "default": false
+    },
+    "mountType": {
+      "type": "enumeration",
+      "enum": [
+        "Clip_Only",
+        "Clip_Tripod",
+        "Tripod_Only",
+        "Monitor_Mount",
+        "Desktop_Stand",
+        "Magnetic",
+        "Universal"
+      ]
+    },
+    "tripodThread": {
+      "type": "boolean",
+      "default": false
+    },
+    "monitorClip": {
+      "type": "boolean",
+      "default": true
+    },
+    "ringLight": {
+      "type": "boolean",
+      "default": false
+    },
+    "ringLightSettings": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "On_Off",
+        "Brightness_Adjustable",
+        "Brightness_Temperature",
+        "Full_RGB"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logitech_Capture",
+        "Logitech_G_Hub",
+        "Razer_Synapse",
+        "Elgato_Camera_Hub",
+        "ASUS_Armoury_Crate",
+        "AVerMedia_CamEngine",
+        "Insta360_Link_Controller",
+        "Obsbot_WebCam",
+        "OBS_Studio_Compatible",
+        "Streamlabs_Compatible"
+      ]
+    },
+    "backgroundRemoval": {
+      "type": "boolean",
+      "default": false
+    },
+    "backgroundReplacement": {
+      "type": "boolean",
+      "default": false
+    },
+    "beautyFilters": {
+      "type": "boolean",
+      "default": false
+    },
+    "streamingOptimized": {
+      "type": "boolean",
+      "default": false
+    },
+    "windowsHello": {
+      "type": "boolean",
+      "default": false
+    },
+    "platformCompatibility": {
+      "type": "enumeration",
+      "enum": [
+        "Windows_Only",
+        "Mac_Only",
+        "Windows_Mac",
+        "Windows_Mac_Chrome",
+        "Windows_Mac_Linux",
+        "Universal",
+        "iOS_Android"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "g_Under_50",
+        "g_50_75",
+        "g_75_100",
+        "g_100_125",
+        "g_125_150",
+        "g_150_200",
+        "g_200_300",
+        "g_Over_300"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "Black",
+        "White",
+        "Gray",
+        "Silver",
+        "Graphite",
+        "Pink",
+        "Blue"
+      ]
+    }
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "kind": "collectionType",
+  "collectionName": "headset_specifications",
+  "info": {
+    "singularName": "headset-specification",
+    "pluralName": "headset-specifications",
+    "displayName": "Headset Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "headset_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Logitech",
+        "Razer",
+        "Corsair",
+        "SteelSeries",
+        "HyperX",
+        "ASUS",
+        "Astro",
+        "Turtle_Beach",
+        "JBL",
+        "Audio_Technica",
+        "Sennheiser",
+        "EPOS",
+        "Beyerdynamic",
+        "Drop",
+        "Audeze",
+        "Sony",
+        "Microsoft",
+        "Creative",
+        "Cooler_Master",
+        "Roccat",
+        "MSI",
+        "Gigabyte",
+        "Fnatic",
+        "NZXT",
+        "Skullcandy"
+      ]
+    },
+    "series": {
+      "type": "enumeration",
+      "enum": [
+        "G_Series",
+        "G_Pro",
+        "G_Pro_X",
+        "BlackShark",
+        "Kraken",
+        "Barracuda",
+        "Nari",
+        "Void",
+        "HS_Series",
+        "Virtuoso",
+        "Arctis",
+        "Arctis_Nova",
+        "Arctis_Prime",
+        "Cloud",
+        "Cloud_Alpha",
+        "Cloud_II",
+        "Cloud_III",
+        "Cloud_Stinger",
+        "ROG_Delta",
+        "ROG_Strix",
+        "ROG_Fusion",
+        "TUF_Gaming",
+        "A40",
+        "A50",
+        "Stealth",
+        "Recon",
+        "Elite",
+        "Atlas",
+        "Quantum",
+        "M_Series",
+        "GSP",
+        "Game_One",
+        "Game_Zero",
+        "PC_Series",
+        "Penrose",
+        "Mobius",
+        "Maxwell",
+        "Pulse",
+        "INZONE",
+        "Xbox_Wireless",
+        "MH_Series",
+        "Immersa",
+        "Delta",
+        "Elo",
+        "GH_Series",
+        "AORUS",
+        "React",
+        "Relay"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Over_Ear_Closed",
+        "Over_Ear_Open",
+        "On_Ear",
+        "In_Ear"
+      ]
+    },
+    "connectivity": {
+      "type": "enumeration",
+      "enum": [
+        "Wired_3_5mm",
+        "Wired_USB",
+        "Wired_3_5mm_USB",
+        "Wireless_2_4GHz",
+        "Wireless_Bluetooth",
+        "Wireless_2_4GHz_Bluetooth",
+        "Wired_Wireless_2_4GHz",
+        "Wired_Wireless_Bluetooth",
+        "Wired_Wireless_2_4GHz_Bluetooth"
+      ]
+    },
+    "wirelessDongle": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "USB_A",
+        "USB_C",
+        "USB_A_USB_C_Adapter"
+      ]
+    },
+    "cableLength": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "m_1_0",
+        "m_1_2",
+        "m_1_5",
+        "m_1_8",
+        "m_2_0",
+        "m_3_0"
+      ]
+    },
+    "cableType": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Fixed",
+        "Detachable_3_5mm",
+        "Detachable_USB_C",
+        "Detachable_Proprietary",
+        "Braided"
+      ]
+    },
+    "driverSize": {
+      "type": "enumeration",
+      "enum": [
+        "mm_30",
+        "mm_40",
+        "mm_44",
+        "mm_50",
+        "mm_53",
+        "mm_55",
+        "mm_60",
+        "mm_70",
+        "mm_100"
+      ]
+    },
+    "driverType": {
+      "type": "enumeration",
+      "enum": [
+        "Dynamic",
+        "Planar_Magnetic",
+        "Electrostatic",
+        "Balanced_Armature",
+        "Hybrid",
+        "Bio_Cellulose",
+        "Titanium",
+        "Graphene",
+        "Liquid_Silicone"
+      ]
+    },
+    "frequencyResponse": {
+      "type": "enumeration",
+      "enum": [
+        "Hz_10_20000",
+        "Hz_10_21000",
+        "Hz_10_22000",
+        "Hz_10_23000",
+        "Hz_10_25000",
+        "Hz_12_20000",
+        "Hz_12_28000",
+        "Hz_15_20000",
+        "Hz_15_25000",
+        "Hz_20_20000",
+        "Hz_20_25000",
+        "Hz_20_40000"
+      ]
+    },
+    "impedance": {
+      "type": "enumeration",
+      "enum": [
+        "Ohm_16",
+        "Ohm_20",
+        "Ohm_24",
+        "Ohm_28",
+        "Ohm_32",
+        "Ohm_35",
+        "Ohm_38",
+        "Ohm_40",
+        "Ohm_45",
+        "Ohm_60",
+        "Ohm_64",
+        "Ohm_80",
+        "Ohm_150",
+        "Ohm_250",
+        "Ohm_300"
+      ]
+    },
+    "sensitivity": {
+      "type": "enumeration",
+      "enum": [
+        "dB_96",
+        "dB_98",
+        "dB_100",
+        "dB_102",
+        "dB_104",
+        "dB_106",
+        "dB_108",
+        "dB_110",
+        "dB_112",
+        "dB_116",
+        "dB_118",
+        "dB_119",
+        "dB_120"
+      ]
+    },
+    "surroundSound": {
+      "type": "enumeration",
+      "enum": [
+        "Stereo",
+        "Virtual_5_1",
+        "Virtual_7_1",
+        "True_5_1",
+        "True_7_1",
+        "Dolby_Atmos",
+        "DTS_Headphone_X",
+        "THX_Spatial",
+        "Tempest_3D",
+        "Windows_Sonic",
+        "Sony_360_Audio",
+        "ASUS_AI_Surround"
+      ]
+    },
+    "anc": {
+      "type": "boolean",
+      "default": false
+    },
+    "ancLevels": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "On_Off",
+        "Levels_2",
+        "Levels_3",
+        "Levels_5",
+        "Adaptive"
+      ]
+    },
+    "transparencyMode": {
+      "type": "boolean",
+      "default": false
+    },
+    "microphoneType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Built_In",
+        "Boom_Fixed",
+        "Boom_Flexible",
+        "Boom_Detachable",
+        "Boom_Retractable",
+        "Boom_Flip_To_Mute",
+        "Dual_Microphone",
+        "Beamforming"
+      ]
+    },
+    "microphonePattern": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Omnidirectional",
+        "Cardioid",
+        "Bidirectional",
+        "Unidirectional",
+        "Noise_Cancelling"
+      ]
+    },
+    "microphoneFrequency": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Hz_50_10000",
+        "Hz_50_12000",
+        "Hz_100_6500",
+        "Hz_100_8000",
+        "Hz_100_10000",
+        "Hz_100_12000",
+        "Hz_100_16000",
+        "Hz_100_18000"
+      ]
+    },
+    "microphoneMute": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Button",
+        "Switch",
+        "Flip_Up",
+        "Touch",
+        "Software_Only"
+      ]
+    },
+    "sidetone": {
+      "type": "boolean",
+      "default": false
+    },
+    "quickCharge": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Min_10_For_2H",
+        "Min_10_For_3H",
+        "Min_15_For_2H",
+        "Min_15_For_3H",
+        "Min_15_For_6H"
+      ]
+    },
+    "earcupMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Leatherette",
+        "Velour",
+        "Fabric",
+        "Mesh",
+        "Memory_Foam",
+        "Protein_Leather",
+        "Hybrid",
+        "Gel_Infused",
+        "Cooling_Gel"
+      ]
+    },
+    "headbandMaterial": {
+      "type": "enumeration",
+      "enum": [
+        "Plastic",
+        "Steel",
+        "Aluminum",
+        "Fabric",
+        "Leatherette",
+        "Memory_Foam",
+        "Suspension"
+      ]
+    },
+    "weight": {
+      "type": "enumeration",
+      "enum": [
+        "g_Under_200",
+        "g_200_250",
+        "g_250_280",
+        "g_280_300",
+        "g_300_330",
+        "g_330_360",
+        "g_360_400",
+        "g_Over_400"
+      ]
+    },
+    "foldable": {
+      "type": "boolean",
+      "default": false
+    },
+    "rotatingEarcups": {
+      "type": "boolean",
+      "default": false
+    },
+    "onEarControls": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Volume_Only",
+        "Volume_Mute",
+        "Volume_Mute_Power",
+        "Full_Controls",
+        "Touch_Controls"
+      ]
+    },
+    "software": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Logitech_G_Hub",
+        "Razer_Synapse",
+        "Corsair_iCUE",
+        "SteelSeries_GG",
+        "HyperX_NGENUITY",
+        "ASUS_Armoury_Crate",
+        "Astro_Command_Center",
+        "Turtle_Beach_Audio_Hub",
+        "JBL_QuantumENGINE",
+        "EPOS_Gaming_Suite",
+        "Audeze_HQ",
+        "Sony_InZone_Hub",
+        "Creative_App",
+        "Roccat_Swarm"
+      ]
+    },
+    "eq": {
+      "type": "boolean",
+      "default": false
+    },
+    "eqPresets": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "Presets_3",
+        "Presets_5",
+        "Presets_10",
+        "Custom_Only",
+        "Presets_Plus_Custom"
+      ]
+    },
+    "platformCompatibility": {
+      "type": "enumeration",
+      "enum": [
+        "PC_Only",
+        "PC_Mac",
+        "PC_PlayStation",
+        "PC_Xbox",
+        "PC_PlayStation_Xbox",
+        "PC_PlayStation_Switch",
+        "PC_Mac_PlayStation_Xbox_Switch",
+        "Universal",
+        "Mobile",
+        "PC_Mobile"
+      ]
+    },
+    "rgb": {
+      "type": "boolean",
+      "default": false
+    },
+    "rgbZones": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Earcup_Logo",
+        "Earcup_Ring",
+        "Earcup_Full",
+        "Dual_Zone"
+      ]
+    }
+  }
+}

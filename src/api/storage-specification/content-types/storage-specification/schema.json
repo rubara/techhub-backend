@@ -1,0 +1,390 @@
+{
+  "kind": "collectionType",
+  "collectionName": "storage_specifications",
+  "info": {
+    "singularName": "storage-specification",
+    "pluralName": "storage-specifications",
+    "displayName": "Storage Specification"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "storage_specification"
+    },
+    "manufacturer": {
+      "type": "enumeration",
+      "enum": [
+        "Samsung",
+        "Western_Digital",
+        "Seagate",
+        "Crucial",
+        "Kingston",
+        "SK_Hynix",
+        "Sabrent",
+        "Corsair",
+        "ADATA",
+        "PNY",
+        "Lexar",
+        "TeamGroup",
+        "Patriot",
+        "Toshiba",
+        "Intel",
+        "Micron",
+        "Solidigm",
+        "Phison",
+        "MSI",
+        "Gigabyte",
+        "Silicon_Power"
+      ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "NVMe_SSD",
+        "SATA_SSD",
+        "HDD",
+        "External_SSD",
+        "External_HDD"
+      ]
+    },
+    "formFactor": {
+      "type": "enumeration",
+      "enum": [
+        "M2_2280",
+        "M2_2260",
+        "M2_2242",
+        "M2_2230",
+        "Drive_2_5inch",
+        "Drive_3_5inch",
+        "mSATA",
+        "U2",
+        "Add_In_Card",
+        "External"
+      ]
+    },
+    "interface": {
+      "type": "enumeration",
+      "enum": [
+        "PCIe_5_0_x4",
+        "PCIe_4_0_x4",
+        "PCIe_3_0_x4",
+        "PCIe_3_0_x2",
+        "SATA_III",
+        "SATA_II",
+        "USB_3_2_Gen2x2",
+        "USB_3_2_Gen2",
+        "USB_3_2_Gen1",
+        "USB_3_0",
+        "Thunderbolt_4",
+        "Thunderbolt_3"
+      ]
+    },
+    "capacity": {
+      "type": "enumeration",
+      "enum": [
+        "GB_120",
+        "GB_128",
+        "GB_240",
+        "GB_250",
+        "GB_256",
+        "GB_480",
+        "GB_500",
+        "GB_512",
+        "GB_960",
+        "GB_1000",
+        "TB_1",
+        "TB_2",
+        "TB_4",
+        "TB_8",
+        "TB_10",
+        "TB_12",
+        "TB_14",
+        "TB_16",
+        "TB_18",
+        "TB_20",
+        "TB_22",
+        "TB_24"
+      ]
+    },
+    "readSpeed": {
+      "type": "enumeration",
+      "enum": [
+        "MBs_500",
+        "MBs_550",
+        "MBs_560",
+        "MBs_1000",
+        "MBs_1500",
+        "MBs_2000",
+        "MBs_2500",
+        "MBs_3000",
+        "MBs_3200",
+        "MBs_3400",
+        "MBs_3500",
+        "MBs_4000",
+        "MBs_4500",
+        "MBs_5000",
+        "MBs_5500",
+        "MBs_6000",
+        "MBs_6500",
+        "MBs_7000",
+        "MBs_7200",
+        "MBs_7300",
+        "MBs_7400",
+        "MBs_7450",
+        "MBs_9500",
+        "MBs_10000",
+        "MBs_10500",
+        "MBs_11000",
+        "MBs_12000",
+        "MBs_12400",
+        "MBs_14000",
+        "MBs_14500"
+      ]
+    },
+    "writeSpeed": {
+      "type": "enumeration",
+      "enum": [
+        "MBs_450",
+        "MBs_500",
+        "MBs_520",
+        "MBs_530",
+        "MBs_1000",
+        "MBs_1500",
+        "MBs_2000",
+        "MBs_2500",
+        "MBs_3000",
+        "MBs_3200",
+        "MBs_3400",
+        "MBs_3500",
+        "MBs_4000",
+        "MBs_4500",
+        "MBs_5000",
+        "MBs_5500",
+        "MBs_6000",
+        "MBs_6500",
+        "MBs_6850",
+        "MBs_6900",
+        "MBs_7000",
+        "MBs_8500",
+        "MBs_9000",
+        "MBs_9500",
+        "MBs_10000",
+        "MBs_11000",
+        "MBs_11800",
+        "MBs_12000"
+      ]
+    },
+    "randomRead": {
+      "type": "enumeration",
+      "enum": [
+        "IOPS_50K",
+        "IOPS_75K",
+        "IOPS_90K",
+        "IOPS_100K",
+        "IOPS_200K",
+        "IOPS_350K",
+        "IOPS_400K",
+        "IOPS_500K",
+        "IOPS_600K",
+        "IOPS_700K",
+        "IOPS_800K",
+        "IOPS_900K",
+        "IOPS_1000K",
+        "IOPS_1100K",
+        "IOPS_1200K",
+        "IOPS_1300K",
+        "IOPS_1400K",
+        "IOPS_1500K",
+        "IOPS_1600K",
+        "IOPS_1700K",
+        "IOPS_1800K",
+        "IOPS_2000K"
+      ]
+    },
+    "randomWrite": {
+      "type": "enumeration",
+      "enum": [
+        "IOPS_50K",
+        "IOPS_75K",
+        "IOPS_90K",
+        "IOPS_100K",
+        "IOPS_200K",
+        "IOPS_350K",
+        "IOPS_400K",
+        "IOPS_500K",
+        "IOPS_600K",
+        "IOPS_700K",
+        "IOPS_800K",
+        "IOPS_900K",
+        "IOPS_1000K",
+        "IOPS_1100K",
+        "IOPS_1200K",
+        "IOPS_1300K",
+        "IOPS_1400K",
+        "IOPS_1500K",
+        "IOPS_1600K",
+        "IOPS_1800K",
+        "IOPS_2000K"
+      ]
+    },
+    "controller": {
+      "type": "enumeration",
+      "enum": [
+        "Samsung_Pascal",
+        "Samsung_Elpis",
+        "Samsung_Phoenix",
+        "Phison_E12",
+        "Phison_E16",
+        "Phison_E18",
+        "Phison_E21T",
+        "Phison_E26",
+        "Phison_E31T",
+        "Silicon_Motion_SM2259",
+        "Silicon_Motion_SM2262EN",
+        "Silicon_Motion_SM2263XT",
+        "Silicon_Motion_SM2264",
+        "Silicon_Motion_SM2267",
+        "Silicon_Motion_SM2269XT",
+        "Maxio_MAP1202",
+        "Maxio_MAP1602",
+        "Realtek_RTS5762",
+        "Realtek_RTS5765DL",
+        "InnoGrit_IG5220",
+        "InnoGrit_IG5236",
+        "InnoGrit_IG5666",
+        "WD_Custom",
+        "Seagate_Custom",
+        "Marvell",
+        "SanDisk",
+        "Intel_Custom",
+        "Solidigm_Custom"
+      ]
+    },
+    "nandType": {
+      "type": "enumeration",
+      "enum": [
+        "SLC",
+        "MLC",
+        "TLC",
+        "QLC",
+        "PLC",
+        "V_NAND",
+        "BiCS_NAND",
+        "NAND_3D_96L",
+        "NAND_3D_128L",
+        "NAND_3D_162L",
+        "NAND_3D_176L",
+        "NAND_3D_200L",
+        "NAND_3D_218L",
+        "NAND_3D_232L",
+        "NAND_3D_236L",
+        "NAND_3D_280L"
+      ]
+    },
+    "dreamCache": {
+      "type": "boolean",
+      "default": false
+    },
+    "dreamCacheSize": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "MB_256",
+        "MB_512",
+        "GB_1",
+        "GB_2",
+        "GB_4"
+      ]
+    },
+    "tbw": {
+      "type": "enumeration",
+      "enum": [
+        "TBW_100",
+        "TBW_150",
+        "TBW_200",
+        "TBW_300",
+        "TBW_400",
+        "TBW_500",
+        "TBW_600",
+        "TBW_700",
+        "TBW_800",
+        "TBW_1000",
+        "TBW_1200",
+        "TBW_1400",
+        "TBW_1500",
+        "TBW_1800",
+        "TBW_2000",
+        "TBW_2400",
+        "TBW_2800",
+        "TBW_3000",
+        "TBW_3600",
+        "TBW_4000",
+        "TBW_5000",
+        "TBW_6000",
+        "TBW_7000"
+      ]
+    },
+    "mtbf": {
+      "type": "enumeration",
+      "enum": [
+        "Hours_1_5M",
+        "Hours_1_8M",
+        "Hours_2M",
+        "Hours_2_4M"
+      ]
+    },
+    "encryption": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "AES_128bit",
+        "AES_256bit",
+        "TCG_Opal_2_0",
+        "IEEE_1667",
+        "BitLocker"
+      ]
+    },
+    "hhdRpm": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "RPM_5400",
+        "RPM_5900",
+        "RPM_7200",
+        "RPM_10000",
+        "RPM_15000"
+      ]
+    },
+    "hhdCache": {
+      "type": "enumeration",
+      "enum": [
+        "Not_Applicable",
+        "MB_8",
+        "MB_16",
+        "MB_32",
+        "MB_64",
+        "MB_128",
+        "MB_256",
+        "MB_512"
+      ]
+    },
+    "heatsink": {
+      "type": "boolean",
+      "default": false
+    },
+    "ps5Compatible": {
+      "type": "boolean",
+      "default": false
+    },
+    "directStorageSupport": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

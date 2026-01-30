@@ -1,0 +1,7 @@
+/**
+ * headset-specification router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::headset-specification.headset-specification');
