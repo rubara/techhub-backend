@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_settings",
+  "info": {
+    "singularName": "global-setting",
+    "pluralName": "global-settings",
+    "displayName": "Global Setting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "showBGNReference": {
+      "type": "boolean",
+      "default": true
+    },
+    "bgnToEurRate": {
+      "type": "decimal",
+      "default": 1.95583
+    },
+    "transitionEndDate": {
+      "type": "datetime",
+      "default": "2026-12-30T22:00:00.000Z"
+    }
+  }
+}

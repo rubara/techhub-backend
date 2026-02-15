@@ -1286,6 +1286,39 @@ export interface ApiCpuSpecificationCpuSpecification
   };
 }
 
+export interface ApiGlobalSettingGlobalSetting extends Struct.SingleTypeSchema {
+  collectionName: 'global_settings';
+  info: {
+    displayName: 'Global Setting';
+    pluralName: 'global-settings';
+    singularName: 'global-setting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bgnToEurRate: Schema.Attribute.Decimal &
+      Schema.Attribute.DefaultTo<1.95583>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global-setting.global-setting'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    showBGNReference: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    transitionEndDate: Schema.Attribute.DateTime &
+      Schema.Attribute.DefaultTo<'2026-12-30T22:00:00.000Z'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGpuSpecificationGpuSpecification
   extends Struct.CollectionTypeSchema {
   collectionName: 'gpu_specifications';
@@ -4757,10 +4790,16 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     orderStatus: Schema.Attribute.Enumeration<
       ['pending', 'processing', 'shipped', 'delivered', 'cancelled']
     >;
+    originalAmount: Schema.Attribute.Decimal;
     paymentMethod: Schema.Attribute.String;
     paymentStatus: Schema.Attribute.Enumeration<
       ['pending', 'paid', 'failed', 'refunded']
     >;
+    promoCode: Schema.Attribute.String;
+    promoDiscountAmount: Schema.Attribute.Decimal &
+      Schema.Attribute.DefaultTo<0>;
+    promoDiscountPercentage: Schema.Attribute.Decimal &
+      Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     shippingAddress: Schema.Attribute.JSON;
     totalAmount: Schema.Attribute.Decimal & Schema.Attribute.Required;
@@ -4787,7 +4826,7 @@ export interface ApiOrganisationDetailOrganisationDetail
     draftAndPublish: true;
   };
   attributes: {
-    addres: Schema.Attribute.String & Schema.Attribute.Required;
+    address: Schema.Attribute.String & Schema.Attribute.Required;
     bankName: Schema.Attribute.String;
     bic: Schema.Attribute.String;
     city: Schema.Attribute.String & Schema.Attribute.Required;
@@ -5012,6 +5051,75 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::webcam-specification.webcam-specification'
     >;
     weight: Schema.Attribute.Decimal;
+  };
+}
+
+export interface ApiPromoCodePromoCode extends Struct.CollectionTypeSchema {
+  collectionName: 'promo_codes';
+  info: {
+    displayName: 'Promo Code';
+    pluralName: 'promo-codes';
+    singularName: 'promo-code';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    code: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 50;
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    discountPercentage: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 100;
+          min: 0;
+        },
+        number
+      >;
+    expirationDate: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::promo-code.promo-code'
+    > &
+      Schema.Attribute.Private;
+    minimumOrderAmount: Schema.Attribute.Decimal &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    usageLimit: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    usedCount: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
   };
 }
 
@@ -6976,6 +7084,7 @@ declare module '@strapi/strapi' {
       'api::category-markup.category-markup': ApiCategoryMarkupCategoryMarkup;
       'api::category.category': ApiCategoryCategory;
       'api::cpu-specification.cpu-specification': ApiCpuSpecificationCpuSpecification;
+      'api::global-setting.global-setting': ApiGlobalSettingGlobalSetting;
       'api::gpu-specification.gpu-specification': ApiGpuSpecificationGpuSpecification;
       'api::headset-specification.headset-specification': ApiHeadsetSpecificationHeadsetSpecification;
       'api::hero-slide.hero-slide': ApiHeroSlideHeroSlide;
@@ -6994,6 +7103,7 @@ declare module '@strapi/strapi' {
       'api::page.page': ApiPagePage;
       'api::pc-build-template.pc-build-template': ApiPcBuildTemplatePcBuildTemplate;
       'api::product.product': ApiProductProduct;
+      'api::promo-code.promo-code': ApiPromoCodePromoCode;
       'api::psu-specification.psu-specification': ApiPsuSpecificationPsuSpecification;
       'api::ram-specification.ram-specification': ApiRamSpecificationRamSpecification;
       'api::review.review': ApiReviewReview;

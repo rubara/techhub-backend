@@ -65,6 +65,20 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::invoice-client.invoice-client"
+    },
+    "promoCode": {
+      "type": "string"
+    },
+    "promoDiscountPercentage": {
+      "type": "decimal",
+      "default": 0
+    },
+    "promoDiscountAmount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "originalAmount": {
+      "type": "decimal"
     }
   }
 }

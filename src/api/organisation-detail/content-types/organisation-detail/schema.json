@@ -23,7 +23,7 @@
     "mol": {
       "type": "string"
     },
-    "addres": {
+    "address": {
       "type": "string",
       "required": true
     },
