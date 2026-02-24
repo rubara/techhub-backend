@@ -4,88 +4,24 @@
   "info": {
     "singularName": "gpu-specification",
     "pluralName": "gpu-specifications",
-    "displayName": "GPU Specification"
+    "displayName": "GPU Specification",
+    "description": "Complete GPU/Video Card specifications from Vali"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "product": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product",
-      "inversedBy": "gpuSpecification"
+    "gpuModel": {
+      "type": "string"
     },
     "chipManufacturer": {
       "type": "enumeration",
       "enum": [
         "NVIDIA",
         "AMD",
-        "Intel"
-      ]
-    },
-    "series": {
-      "type": "enumeration",
-      "enum": [
-        "RTX 5000",
-        "RTX 4000",
-        "RTX 3000",
-        "RTX 2000",
-        "GTX 1600",
-        "GTX 1000",
-        "RX 9000",
-        "RX 7000",
-        "RX 6000",
-        "RX 5000",
-        "Arc A-Series",
-        "Arc B-Series"
-      ]
-    },
-    "gpuModel": {
-      "type": "enumeration",
-      "enum": [
-        "RTX 5090",
-        "RTX 5080",
-        "RTX 5070 Ti",
-        "RTX 5070",
-        "RTX 4090",
-        "RTX 4080 SUPER",
-        "RTX 4080",
-        "RTX 4070 Ti SUPER",
-        "RTX 4070 Ti",
-        "RTX 4070 SUPER",
-        "RTX 4070",
-        "RTX 4060 Ti",
-        "RTX 4060",
-        "RTX 3090 Ti",
-        "RTX 3090",
-        "RTX 3080 Ti",
-        "RTX 3080",
-        "RTX 3070 Ti",
-        "RTX 3070",
-        "RTX 3060 Ti",
-        "RTX 3060",
-        "RX 7900 XTX",
-        "RX 7900 XT",
-        "RX 7900 GRE",
-        "RX 7800 XT",
-        "RX 7700 XT",
-        "RX 7600 XT",
-        "RX 7600",
-        "RX 6950 XT",
-        "RX 6900 XT",
-        "RX 6800 XT",
-        "RX 6800",
-        "RX 6750 XT",
-        "RX 6700 XT",
-        "RX 6650 XT",
-        "RX 6600 XT",
-        "RX 6600",
-        "Arc A770",
-        "Arc A750",
-        "Arc A580",
-        "Arc A380"
+        "Intel",
+        "MATROX"
       ]
     },
     "memory": {
@@ -110,6 +46,7 @@
         "GDDR5X",
         "GDDR6",
         "GDDR6X",
+        "GDDR7",
         "HBM2",
         "HBM2E",
         "HBM3"
@@ -127,25 +64,33 @@
         "Bus_512bit"
       ]
     },
-    "boostClock": {
+    "slotWidth": {
       "type": "enumeration",
       "enum": [
-        "MHz_1500",
-        "MHz_1600",
-        "MHz_1700",
-        "MHz_1800",
-        "MHz_1900",
-        "MHz_2000",
-        "MHz_2100",
-        "MHz_2200",
-        "MHz_2300",
-        "MHz_2400",
-        "MHz_2500",
-        "MHz_2600",
-        "MHz_2700",
-        "MHz_2800",
-        "MHz_2900",
-        "MHz_3000"
+        "Slot_1_5",
+        "Slot_2",
+        "Slot_2_5",
+        "Slot_2_7",
+        "Slot_3",
+        "Slot_3_5",
+        "Slot_4"
+      ]
+    },
+    "recommendedPSU": {
+      "type": "enumeration",
+      "enum": [
+        "PSU_400W",
+        "PSU_450W",
+        "PSU_500W",
+        "PSU_550W",
+        "PSU_600W",
+        "PSU_650W",
+        "PSU_700W",
+        "PSU_750W",
+        "PSU_800W",
+        "PSU_850W",
+        "PSU_1000W",
+        "PSU_1200W"
       ]
     },
     "cudaCoresStreams": {
@@ -176,35 +121,21 @@
         "Cores_21760"
       ]
     },
-    "fans": {
+    "series": {
       "type": "enumeration",
       "enum": [
-        "Fans_1",
-        "Fans_2",
-        "Fans_3"
-      ]
-    },
-    "slotWidth": {
-      "type": "enumeration",
-      "enum": [
-        "Slot_1_5",
-        "Slot_2",
-        "Slot_2_5",
-        "Slot_2_7",
-        "Slot_3",
-        "Slot_3_5",
-        "Slot_4"
-      ]
-    },
-    "cardLength": {
-      "type": "enumeration",
-      "enum": [
-        "Length_Under200mm",
-        "Length_200_250mm",
-        "Length_250_300mm",
-        "Length_300_320mm",
-        "Length_320_350mm",
-        "Length_Over350mm"
+        "RTX_5000",
+        "RTX_4000",
+        "RTX_3000",
+        "RTX_2000",
+        "GTX_1600",
+        "GTX_1000",
+        "RX_9000",
+        "RX_7000",
+        "RX_6000",
+        "RX_5000",
+        "Arc_A_Series",
+        "Arc_B_Series"
       ]
     },
     "powerConnector": {
@@ -220,70 +151,6 @@
         "Power_16pin"
       ]
     },
-    "tdp": {
-      "type": "enumeration",
-      "enum": [
-        "TDP_75W",
-        "TDP_100W",
-        "TDP_120W",
-        "TDP_150W",
-        "TDP_170W",
-        "TDP_200W",
-        "TDP_220W",
-        "TDP_250W",
-        "TDP_285W",
-        "TDP_300W",
-        "TDP_320W",
-        "TDP_350W",
-        "TDP_400W",
-        "TDP_450W",
-        "TDP_500W",
-        "TDP_600W"
-      ]
-    },
-    "recommendedPSU": {
-      "type": "enumeration",
-      "enum": [
-        "PSU_400W",
-        "PSU_450W",
-        "PSU_500W",
-        "PSU_550W",
-        "PSU_600W",
-        "PSU_650W",
-        "PSU_700W",
-        "PSU_750W",
-        "PSU_800W",
-        "PSU_850W",
-        "PSU_1000W",
-        "PSU_1200W"
-      ]
-    },
-    "hdmiPorts": {
-      "type": "enumeration",
-      "enum": [
-        "HDMI_0",
-        "HDMI_1",
-        "HDMI_2"
-      ]
-    },
-    "displayPorts": {
-      "type": "enumeration",
-      "enum": [
-        "DP_0",
-        "DP_1",
-        "DP_2",
-        "DP_3",
-        "DP_4"
-      ]
-    },
-    "usbCPorts": {
-      "type": "enumeration",
-      "enum": [
-        "USB_C_0",
-        "USB_C_1",
-        "USB_C_2"
-      ]
-    },
     "maxResolution": {
       "type": "enumeration",
       "enum": [
@@ -293,14 +160,6 @@
         "Res_5K",
         "Res_8K"
       ]
-    },
-    "rgb": {
-      "type": "boolean",
-      "default": false
-    },
-    "backplate": {
-      "type": "boolean",
-      "default": false
     },
     "rayTracing": {
       "type": "boolean",
@@ -313,6 +172,18 @@
     "fsr": {
       "type": "boolean",
       "default": false
+    },
+    "hdmiPorts": {
+      "type": "string"
+    },
+    "displayPorts": {
+      "type": "string"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "mappedBy": "gpu_specification"
     }
   }
 }

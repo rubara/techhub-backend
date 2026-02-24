@@ -4,22 +4,28 @@
   "info": {
     "singularName": "category-markup",
     "pluralName": "category-markups",
-    "displayName": "CategoryMarkup"
+    "displayName": "Category Markup",
+    "description": "Price markup per category"
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "vendor": {
+    "category": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::vendor.vendor"
+      "relation": "oneToOne",
+      "target": "api::category.category"
     },
-    "markupPercent": {
+    "markupPercentage": {
       "type": "decimal",
       "required": true,
-      "default": 0
+      "default": 0,
+      "description": "Price markup percentage for this category"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

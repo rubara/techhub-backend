@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vali_vendors",
+  "info": {
+    "singularName": "vali-vendor",
+    "pluralName": "vali-vendors",
+    "displayName": "Vali Vendor",
+    "description": "Vali API vendor configuration"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "apiUrl": {
+      "type": "string",
+      "required": true,
+      "default": "https://api.vali.bg"
+    },
+    "apiToken": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

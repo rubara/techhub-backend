@@ -139,11 +139,11 @@
       "target": "api::review.review",
       "mappedBy": "product"
     },
-    "gpuSpecification": {
+    "gpu_specification": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::gpu-specification.gpu-specification",
-      "mappedBy": "product"
+      "inversedBy": "product"
     },
     "cpu_specification": {
       "type": "relation",
@@ -228,6 +228,21 @@
       "relation": "oneToOne",
       "target": "api::webcam-specification.webcam-specification",
       "mappedBy": "product"
+    },
+    "valiId": {
+      "type": "integer",
+      "required": false,
+      "unique": true
+    },
+    "valiStatus": {
+      "type": "enumeration",
+      "enum": [
+        "status_0",
+        "status_1",
+        "status_2",
+        "status_3",
+        "status_4"
+      ]
     }
   }
 }

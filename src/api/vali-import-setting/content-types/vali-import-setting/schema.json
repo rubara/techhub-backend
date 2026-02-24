@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "vali_import_setting",
+  "info": {
+    "singularName": "vali-import-setting",
+    "pluralName": "vali-import-settings",
+    "displayName": "Vali Import Settings",
+    "description": "Global settings for Vali product imports"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valiVendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vali-vendor.vali-vendor"
+    },
+    "selectedCategories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "importOutOfStock": {
+      "type": "boolean",
+      "default": false,
+      "description": "Import products with status 0 (out of stock)"
+    },
+    "bgnToEurRate": {
+      "type": "decimal",
+      "default": 1.95583,
+      "description": "BGN to EUR conversion rate (fixed)"
+    },
+    "priceMarkup": {
+      "type": "decimal",
+      "default": 0,
+      "description": "Global price markup percentage (can be overridden per category)"
+    },
+    "autoSyncEnabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Enable automatic daily sync"
+    },
+    "syncTime": {
+      "type": "time",
+      "description": "Time of day to run automatic sync (e.g., 02:00)"
+    },
+    "updatePrices": {
+      "type": "boolean",
+      "default": true,
+      "description": "Update prices for existing products"
+    },
+    "updateStock": {
+      "type": "boolean",
+      "default": true,
+      "description": "Update stock status for existing products"
+    },
+    "lastSyncAt": {
+      "type": "datetime",
+      "description": "Last successful sync timestamp"
+    }
+  }
+}

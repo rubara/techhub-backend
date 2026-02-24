@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vali_parameter_mappings",
+  "info": {
+    "singularName": "vali-parameter-mapping",
+    "pluralName": "vali-parameter-mappings",
+    "displayName": "Vali Parameter Mapping",
+    "description": "Maps Vali API parameters to Strapi specification fields"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "strapiCategory": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "valiCategoryIds": {
+      "type": "json",
+      "required": true,
+      "description": "Array of Vali category IDs (e.g., [388] for GPUs)"
+    },
+    "specificationType": {
+      "type": "enumeration",
+      "enum": [
+        "gpu_specification",
+        "cpu_specification",
+        "ram_specification",
+        "motherboard_specification",
+        "storage_specification",
+        "psu_specification",
+        "case_specification"
+      ],
+      "required": true
+    },
+    "parameterMappings": {
+      "type": "json",
+      "required": true,
+      "description": "Field mapping: { strapiField: { valiParameterNames: ['Param1', 'Param2'] } }"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

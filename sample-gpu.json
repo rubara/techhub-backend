@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>	<result>
+		<total_items>10787</total_items>
+		<per_page>1</per_page>
+		<current_page>1</current_page>
+		<last_page>10787</last_page>
+		<next_page_url>https://www.vali.bg/api/v1/products/full?api_token=50X4t2KBRkN60xsWJ6VY35108jYwAUdYNgpKO0ExIkZJ51AJkwROFoESWsrX&amp;per_page=1&amp;category_id=388&amp;page=2</next_page_url>
+		<prev_page_url></prev_page_url>
+		<products>
+							<product>
+	<id>143</id>
+	<idWF>6160</idWF>
+	<reference_number><![CDATA[HDD-SATA3-1000WD-BLUE]]></reference_number>
+	<manufacturer_id>130</manufacturer_id>
+	<status>0</status>
+	<price_client>62.68</price_client>
+	<price_client_promo>NULL</price_client_promo>
+	<price_partner>62.68</price_partner>
+	<price_promo>NULL</price_promo>
+		<show>1</show>
+	<categories>
+									<category>496</category>
+						</categories>
+			<model><![CDATA[WD10EZEX]]></model>
+		<barcode><![CDATA[718037779911]]></barcode>
+		<warranty>24</warranty>
+		<weight>0.45</weight>
+		<manufacturer><![CDATA[WD]]></manufacturer>
+		<name>
+												<item>
+						<language_code>bg</language_code>
+						<text><![CDATA[Хард диск WD Blue, 1TB, 7200rpm, 64MB, SATA 3]]></text>
+					</item>
+																<item>
+						<language_code>en</language_code>
+						<text><![CDATA[HDD WD Blue, 1TB, 7200rpm, 64MB, SATA 3]]></text>
+					</item>
+									</name>
+		<description>
+												<item>
+						<language_code>bg</language_code>
+						<text><![CDATA[]]></text>
+					</item>
+																<item>
+						<language_code>en</language_code>
+						<text><![CDATA[]]></text>
+					</item>
+									</description>
+		<parameters>
+																		<parameter>
+							<parameter_id>537</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Тип хард диск]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Type]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5080</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Настолен компютър]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[PC]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>538</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Капацитет]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Capacity]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5074</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[1 TB]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[1 TB]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>539</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Скорост]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Rotational speed (RPM)]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5075</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[7200 rpm]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[7200 rpm]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>540</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Интерфейс]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Interface]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5076</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[SATA3 6 Gb/s]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[SATA3 6 Gb/s]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>543</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Форм фактор]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Form Factor]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5073</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[3.5 inch]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[3.5 inch]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>544</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Буфер]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Cache]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5077</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[64 MB]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[64 MB]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+																				<parameter>
+							<parameter_id>546</parameter_id>
+							<parameter_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[Размери (мм)]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[Dimension (mm)]]></text>
+										</item>
+																								</parameter_name>
+							<option_id>5078</option_id>
+							<option_name>
+																											<item>
+											<language_code>bg</language_code>
+											<text><![CDATA[147 x 102 x 26]]></text>
+										</item>
+																																				<item>
+											<language_code>en</language_code>
+											<text><![CDATA[147 x 102 x 26]]></text>
+										</item>
+																								</option_name>
+						</parameter>
+														</parameters>
+		<images>
+							<image>
+					<href><![CDATA[https://www.vali.bg/UserFiles/Product/gallery_1/D7E1E8CE-A170-1209-F698-53BEEFFAE93B.jpg]]></href>
+				</image>
+					</images>
+		<documents>
+					</documents>
+		<flags>
+					</flags>
+	</product>
+					</products>
+	</result>

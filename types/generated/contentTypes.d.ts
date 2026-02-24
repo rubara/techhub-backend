@@ -911,7 +911,8 @@ export interface ApiCategoryMarkupCategoryMarkup
   extends Struct.CollectionTypeSchema {
   collectionName: 'category_markups';
   info: {
-    displayName: 'CategoryMarkup';
+    description: 'Price markup per category';
+    displayName: 'Category Markup';
     pluralName: 'category-markups';
     singularName: 'category-markup';
   };
@@ -919,23 +920,24 @@ export interface ApiCategoryMarkupCategoryMarkup
     draftAndPublish: false;
   };
   attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::category-markup.category-markup'
     > &
       Schema.Attribute.Private;
-    markupPercent: Schema.Attribute.Decimal &
+    markupPercentage: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    vendor: Schema.Attribute.Relation<'manyToOne', 'api::vendor.vendor'>;
   };
 }
 
@@ -1323,6 +1325,7 @@ export interface ApiGpuSpecificationGpuSpecification
   extends Struct.CollectionTypeSchema {
   collectionName: 'gpu_specifications';
   info: {
+    description: 'Complete GPU/Video Card specifications from Vali';
     displayName: 'GPU Specification';
     pluralName: 'gpu-specifications';
     singularName: 'gpu-specification';
@@ -1331,38 +1334,9 @@ export interface ApiGpuSpecificationGpuSpecification
     draftAndPublish: true;
   };
   attributes: {
-    backplate: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    boostClock: Schema.Attribute.Enumeration<
-      [
-        'MHz_1500',
-        'MHz_1600',
-        'MHz_1700',
-        'MHz_1800',
-        'MHz_1900',
-        'MHz_2000',
-        'MHz_2100',
-        'MHz_2200',
-        'MHz_2300',
-        'MHz_2400',
-        'MHz_2500',
-        'MHz_2600',
-        'MHz_2700',
-        'MHz_2800',
-        'MHz_2900',
-        'MHz_3000',
-      ]
+    chipManufacturer: Schema.Attribute.Enumeration<
+      ['NVIDIA', 'AMD', 'Intel', 'MATROX']
     >;
-    cardLength: Schema.Attribute.Enumeration<
-      [
-        'Length_Under200mm',
-        'Length_200_250mm',
-        'Length_250_300mm',
-        'Length_300_320mm',
-        'Length_320_350mm',
-        'Length_Over350mm',
-      ]
-    >;
-    chipManufacturer: Schema.Attribute.Enumeration<['NVIDIA', 'AMD', 'Intel']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1393,58 +1367,11 @@ export interface ApiGpuSpecificationGpuSpecification
         'Cores_21760',
       ]
     >;
-    displayPorts: Schema.Attribute.Enumeration<
-      ['DP_0', 'DP_1', 'DP_2', 'DP_3', 'DP_4']
-    >;
+    displayPorts: Schema.Attribute.String;
     dlss: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    fans: Schema.Attribute.Enumeration<['Fans_1', 'Fans_2', 'Fans_3']>;
     fsr: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    gpuModel: Schema.Attribute.Enumeration<
-      [
-        'RTX 5090',
-        'RTX 5080',
-        'RTX 5070 Ti',
-        'RTX 5070',
-        'RTX 4090',
-        'RTX 4080 SUPER',
-        'RTX 4080',
-        'RTX 4070 Ti SUPER',
-        'RTX 4070 Ti',
-        'RTX 4070 SUPER',
-        'RTX 4070',
-        'RTX 4060 Ti',
-        'RTX 4060',
-        'RTX 3090 Ti',
-        'RTX 3090',
-        'RTX 3080 Ti',
-        'RTX 3080',
-        'RTX 3070 Ti',
-        'RTX 3070',
-        'RTX 3060 Ti',
-        'RTX 3060',
-        'RX 7900 XTX',
-        'RX 7900 XT',
-        'RX 7900 GRE',
-        'RX 7800 XT',
-        'RX 7700 XT',
-        'RX 7600 XT',
-        'RX 7600',
-        'RX 6950 XT',
-        'RX 6900 XT',
-        'RX 6800 XT',
-        'RX 6800',
-        'RX 6750 XT',
-        'RX 6700 XT',
-        'RX 6650 XT',
-        'RX 6600 XT',
-        'RX 6600',
-        'Arc A770',
-        'Arc A750',
-        'Arc A580',
-        'Arc A380',
-      ]
-    >;
-    hdmiPorts: Schema.Attribute.Enumeration<['HDMI_0', 'HDMI_1', 'HDMI_2']>;
+    gpuModel: Schema.Attribute.String;
+    hdmiPorts: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1480,7 +1407,7 @@ export interface ApiGpuSpecificationGpuSpecification
       ]
     >;
     memoryType: Schema.Attribute.Enumeration<
-      ['GDDR5', 'GDDR5X', 'GDDR6', 'GDDR6X', 'HBM2', 'HBM2E', 'HBM3']
+      ['GDDR5', 'GDDR5X', 'GDDR6', 'GDDR6X', 'GDDR7', 'HBM2', 'HBM2E', 'HBM3']
     >;
     powerConnector: Schema.Attribute.Enumeration<
       [
@@ -1513,21 +1440,20 @@ export interface ApiGpuSpecificationGpuSpecification
         'PSU_1200W',
       ]
     >;
-    rgb: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     series: Schema.Attribute.Enumeration<
       [
-        'RTX 5000',
-        'RTX 4000',
-        'RTX 3000',
-        'RTX 2000',
-        'GTX 1600',
-        'GTX 1000',
-        'RX 9000',
-        'RX 7000',
-        'RX 6000',
-        'RX 5000',
-        'Arc A-Series',
-        'Arc B-Series',
+        'RTX_5000',
+        'RTX_4000',
+        'RTX_3000',
+        'RTX_2000',
+        'GTX_1600',
+        'GTX_1000',
+        'RX_9000',
+        'RX_7000',
+        'RX_6000',
+        'RX_5000',
+        'Arc_A_Series',
+        'Arc_B_Series',
       ]
     >;
     slotWidth: Schema.Attribute.Enumeration<
@@ -1541,30 +1467,9 @@ export interface ApiGpuSpecificationGpuSpecification
         'Slot_4',
       ]
     >;
-    tdp: Schema.Attribute.Enumeration<
-      [
-        'TDP_75W',
-        'TDP_100W',
-        'TDP_120W',
-        'TDP_150W',
-        'TDP_170W',
-        'TDP_200W',
-        'TDP_220W',
-        'TDP_250W',
-        'TDP_285W',
-        'TDP_300W',
-        'TDP_320W',
-        'TDP_350W',
-        'TDP_400W',
-        'TDP_450W',
-        'TDP_500W',
-        'TDP_600W',
-      ]
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    usbCPorts: Schema.Attribute.Enumeration<['USB_C_0', 'USB_C_1', 'USB_C_2']>;
   };
 }
 
@@ -4966,7 +4871,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     descriptionBg: Schema.Attribute.Blocks;
     featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     gallery: Schema.Attribute.Media<'images', true>;
-    gpuSpecification: Schema.Attribute.Relation<
+    gpu_specification: Schema.Attribute.Relation<
       'oneToOne',
       'api::gpu-specification.gpu-specification'
     >;
@@ -5046,6 +4951,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    valiId: Schema.Attribute.Integer & Schema.Attribute.Unique;
+    valiStatus: Schema.Attribute.Enumeration<
+      ['status_0', 'status_1', 'status_2', 'status_3', 'status_4']
+    >;
     webcam_specification: Schema.Attribute.Relation<
       'oneToOne',
       'api::webcam-specification.webcam-specification'
@@ -6048,6 +5957,141 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     quoteBg: Schema.Attribute.Text;
     rating: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<5>;
     role: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiValiImportSettingValiImportSetting
+  extends Struct.SingleTypeSchema {
+  collectionName: 'vali_import_setting';
+  info: {
+    description: 'Global settings for Vali product imports';
+    displayName: 'Vali Import Settings';
+    pluralName: 'vali-import-settings';
+    singularName: 'vali-import-setting';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    autoSyncEnabled: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    bgnToEurRate: Schema.Attribute.Decimal &
+      Schema.Attribute.DefaultTo<1.95583>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    importOutOfStock: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    lastSyncAt: Schema.Attribute.DateTime;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vali-import-setting.vali-import-setting'
+    > &
+      Schema.Attribute.Private;
+    priceMarkup: Schema.Attribute.Decimal & Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    selectedCategories: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::category.category'
+    >;
+    syncTime: Schema.Attribute.Time;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatePrices: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    updateStock: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    valiVendor: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::vali-vendor.vali-vendor'
+    >;
+  };
+}
+
+export interface ApiValiParameterMappingValiParameterMapping
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'vali_parameter_mappings';
+  info: {
+    description: 'Maps Vali API parameters to Strapi specification fields';
+    displayName: 'Vali Parameter Mapping';
+    pluralName: 'vali-parameter-mappings';
+    singularName: 'vali-parameter-mapping';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vali-parameter-mapping.vali-parameter-mapping'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    parameterMappings: Schema.Attribute.JSON & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    specificationType: Schema.Attribute.Enumeration<
+      [
+        'gpu_specification',
+        'cpu_specification',
+        'ram_specification',
+        'motherboard_specification',
+        'storage_specification',
+        'psu_specification',
+        'case_specification',
+      ]
+    > &
+      Schema.Attribute.Required;
+    strapiCategory: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::category.category'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    valiCategoryIds: Schema.Attribute.JSON & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiValiVendorValiVendor extends Struct.CollectionTypeSchema {
+  collectionName: 'vali_vendors';
+  info: {
+    description: 'Vali API vendor configuration';
+    displayName: 'Vali Vendor';
+    pluralName: 'vali-vendors';
+    singularName: 'vali-vendor';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    apiToken: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Private;
+    apiUrl: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://api.vali.bg'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vali-vendor.vali-vendor'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -7109,6 +7153,9 @@ declare module '@strapi/strapi' {
       'api::review.review': ApiReviewReview;
       'api::storage-specification.storage-specification': ApiStorageSpecificationStorageSpecification;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
+      'api::vali-import-setting.vali-import-setting': ApiValiImportSettingValiImportSetting;
+      'api::vali-parameter-mapping.vali-parameter-mapping': ApiValiParameterMappingValiParameterMapping;
+      'api::vali-vendor.vali-vendor': ApiValiVendorValiVendor;
       'api::vendor-product.vendor-product': ApiVendorProductVendorProduct;
       'api::vendor.vendor': ApiVendorVendor;
       'api::webcam-specification.webcam-specification': ApiWebcamSpecificationWebcamSpecification;
